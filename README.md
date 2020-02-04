@@ -14,9 +14,9 @@ local repoon. Koskee myös tiedoston luomisia ja poistamisia.
 - git diff - näyttää erot tiedostojen työtila versioissa verrattuna local repossa oleviin versioihin. Eli näyttää muutokset, joita ei ole commitettu
 - git reset - tyhjentää filut staged tilasta, eli jos olet tehnyt git add jonkun tiedoston niin git reset poistaa sen tiedoston staged tilasta
 
-- git checkout - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version
-### Ensimmäisen repositoryn luonti omalle koneelle
-### Mikä Git on ja mihin sitä tarvitaan?
+git checkout - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version
+- Ensimmäisen repositoryn luonti omalle koneelle
+- **Mikä Git on ja mihin sitä tarvitaan?**
 Git on versionhallinta. Git on Ilmainen. Git on Hajautettu, siinä ei siis ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
 
  Miten viedä muutokset omasta repositorystä etärepositoryyn
