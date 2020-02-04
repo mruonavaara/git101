@@ -12,7 +12,7 @@ Sisällys
 8. Merge conflict! Mitä tapahtui, mitä teen?
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
-Git on versionhallinta. Git on Ilmainen. Git on Hajautettu, siinä ei siis ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
+Git on versionhallinta. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia toisin sanoen varmuuskopio koodista. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhalinnan avulla tehdyt muutokset on helppo dokumentoida. Git on Ilmainen. Git on Hajautettu, siinä ei siis ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
 
 ### 2. Git:n asennus
 
