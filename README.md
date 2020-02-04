@@ -43,3 +43,4 @@ Git on versionhallinta. Versionhallinnalla tarkoitetaan palvelua, joka säilytt�
 ### 7. Haarat ja miksi niitä tarvitaan
 
 ### 8. Merge conflict! Mitä tapahtui, mitä teen?
+Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
