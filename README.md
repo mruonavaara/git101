@@ -37,6 +37,11 @@ Git on versionhallinta. Versionhallinnalla tarkoitetaan palvelua, joka säilytt�
 - `git checkout` - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version
 
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
+Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn. 
+Anna sitten seuraavat komennot:
+1. `git init`
+2. `git add .`
+3. `git commit -m 'Ensimmäinen commit'`
 
 ### 6. Miten viedä muutokset omasta repositorystä etärepositoryyn
 
