@@ -15,6 +15,11 @@ Sisällys
 Git on versionhallinta. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia toisin sanoen varmuuskopio koodista. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhalinnan avulla tehdyt muutokset on helppo dokumentoida. Git on Ilmainen. Git on Hajautettu, siinä ei siis ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
 
 ### 2. Git:n asennus
+Git:n käyttämiseksi on git-ohjelmisto oltava asennettuna tietokoneella, jolla sitä halutaan käyttää. Git-ohjelmiston asentamiseksi löytyy varmasti useita eri ohjeita ympäri internettiä, alla git:n omat ohjeet
+
+[Git asennusohjeet](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+
 
 ### 3. Komentorivin käyttö
 
