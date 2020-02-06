@@ -49,6 +49,8 @@ Anna sitten seuraavat komennot:
 3. `git commit -m 'Ensimmäinen commit'`
 
 ### 6. Miten viedä muutokset omasta repositorystä etärepositoryyn
+1. `git remote add origin https://github.com/user/example.git`
+2. `git push origin master`
 
 ### 7. Haarat ja miksi niitä tarvitaan
 
