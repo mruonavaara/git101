@@ -19,7 +19,20 @@ Git:n käyttämiseksi on git-ohjelmisto oltava asennettuna tietokoneella, jolla 
 
 [Git asennusohjeet](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
+#### 2.1 Konfigurointi
+##### 2.1.1 Käyttäjätiedot
+Jokaiseen versionhallintaan talletettavaan muutokseen tallennetaan muutoksen tehneen käyttäjän nimi ja sähköpostiosoite. Git-ohjelmiston asentamisen jälkeen olisikin hyvä asettaa käyttäjätiedot komennoilla:
 
+- `git config --global user.name "<username>"`
+- `git config --global user.email <email>`
+
+`<username>` ja `<email>` kohdat korvataan omalla nimellä ja sähköpostilla. Käyttäjätiedot tarvitsee asettaa vain kerran tietokoneelle. --global -tarkennin tarkentimella tiedot asetetaan siten, että asetukset ovat tietokoneen käyttäjäkohtaiset.
+
+##### 2.1.2 Tekstieditori
+Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää tekstieditoria. Ohjelmiston asentamisen jälkeen oletusarvoinen tekstieditori on [vi](https://fi.wikipedia.org/wiki/Vi). Vi:n käyttäminen voi tuntu haastavalta (ohjeita tosin löytyy esim [täältä](https://fi.wikipedia.org/wiki/Vi#Peruskomennot)), joten git-ohjelmistossa on mahdollista vaihtaa tekstieditoria komennolla:
+- `git config --global core.editor "<editor-and-options>"`
+
+Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perusteelliset ohjeet eri editorien asettamiseksi löytyy [täältä](https://git-scm.com/book/tr/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor).
 
 ### 3. Komentorivin käyttö
 
