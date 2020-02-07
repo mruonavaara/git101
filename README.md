@@ -26,7 +26,7 @@ Jokaiseen versionhallintaan talletettavaan muutokseen tallennetaan muutoksen teh
 - `git config --global user.name "<username>"`
 - `git config --global user.email <email>`
 
-`<username>` ja `<email>` kohdat korvataan omalla nimellä ja sähköpostilla. Käyttäjätiedot tarvitsee asettaa vain kerran tietokoneelle. --global -tarkennin tarkentimella tiedot asetetaan siten, että asetukset ovat tietokoneen käyttäjäkohtaiset.
+`<username>` ja `<email>` kohdat korvataan omalla nimellä ja sähköpostilla. Käyttäjätiedot tarvitsee asettaa vain kerran tietokoneelle. --global -tarkentimella tiedot asetetaan siten, että asetukset ovat tietokoneen käyttäjäkohtaiset.
 
 ##### 2.1.2 Tekstieditori
 Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää tekstieditoria. Ohjelmiston asentamisen jälkeen oletusarvoinen tekstieditori on [vi](https://fi.wikipedia.org/wiki/Vi). Vi:n käyttäminen voi tuntu haastavalta (ohjeita tosin löytyy esim [täältä](https://fi.wikipedia.org/wiki/Vi#Peruskomennot)), joten git-ohjelmistossa on mahdollista vaihtaa tekstieditoria komennolla:
