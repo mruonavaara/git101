@@ -66,6 +66,13 @@ Anna sitten seuraavat komennot:
 2. `git push origin master`
 
 ### 7. Haarat ja miksi niitä tarvitaan
+Haarat (branch) ovat mainio keino pitää saman projektikokonaisuuden eri kehityisvaiheita erillään toisistaan kuitenkin pitäen ne samassa repositoryssä. Yleisimpiä haarakehyksiä ja haarojen käyttöä erilaisissa projekteissa löytyy [tästä linkistä](https://nvie.com/posts/a-successful-git-branching-model/).
+
+Haarojen tarkoitusperä on siis pitää esimerkiksi kehityksessä olevan sovelluksen valmiit testatut osat master haarassa ja toteuttaa testausta sekä jatkokehitystä esimerkiksi development haarassa. Lisäksi voidaan hyvin käyttää omia haaroja ei niin tärkeille komponenteille tai ideoille. 
+Tällä tavoin ohjelmistokehittäjä voi turvata ettei mikään erillinen osuus projektissa vaikuta mihinkään muuhun, ennenkuin hän näin päättää ja yhdistää (merge) haaran masteriin. 
+
+Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijaintina täydelliselle koodille mitä ei tulla enää muuttamaan. 
+
 
 ### 8. Merge conflict! Mitä tapahtui, mitä teen?
 Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
