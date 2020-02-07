@@ -54,8 +54,12 @@ Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perustee
 
 - `git checkout` - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version
 
+- `git push` - tallentaa omat lokaalit muutokset etärepositoryyn.
+
+- `git --help` - Listaa hyödyllisimmät git komennot.
+
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
-Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn. 
+Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn.
 Anna sitten seuraavat komennot:
 1. `git init`
 2. `git add .`
@@ -68,10 +72,10 @@ Anna sitten seuraavat komennot:
 ### 7. Haarat ja miksi niitä tarvitaan
 Haarat `branch` ovat mainio keino pitää saman projektikokonaisuuden eri kehityisvaiheita erillään toisistaan kuitenkin pitäen ne samassa repositoryssä. Yleisimpiä haarakehyksiä ja haarojen käyttöä erilaisissa projekteissa löytyy [tästä linkistä](https://nvie.com/posts/a-successful-git-branching-model/).
 
-Haarojen tarkoitusperä on siis pitää esimerkiksi kehityksessä olevan sovelluksen valmiit testatut osat master haarassa ja toteuttaa testausta sekä jatkokehitystä esimerkiksi development haarassa. Lisäksi voidaan hyvin käyttää omia haaroja ei niin tärkeille komponenteille tai ideoille. 
-Tällä tavoin ohjelmistokehittäjä voi turvata ettei mikään erillinen osuus projektissa vaikuta mihinkään muuhun, ennenkuin hän näin päättää ja yhdistää `merge` haaran masteriin. 
+Haarojen tarkoitusperä on siis pitää esimerkiksi kehityksessä olevan sovelluksen valmiit testatut osat master haarassa ja toteuttaa testausta sekä jatkokehitystä esimerkiksi development haarassa. Lisäksi voidaan hyvin käyttää omia haaroja ei niin tärkeille komponenteille tai ideoille.
+Tällä tavoin ohjelmistokehittäjä voi turvata ettei mikään erillinen osuus projektissa vaikuta mihinkään muuhun, ennenkuin hän näin päättää ja yhdistää `merge` haaran masteriin.
 
-Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijaintina täydelliselle koodille mitä ei tulla enää muuttamaan. 
+Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijaintina täydelliselle koodille mitä ei tulla enää muuttamaan.
 
 
 ### 8. Merge conflict! Mitä tapahtui, mitä teen?
