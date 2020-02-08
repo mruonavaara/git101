@@ -34,7 +34,12 @@ Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää
 
 Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perusteelliset ohjeet eri editorien asettamiseksi löytyy [täältä](https://git-scm.com/book/tr/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor).
 
-### 3. Komentorivin käyttö
+### 3. Komentotulkin käyttö
+Komentoliittymässä ajetaan tyypillisesti komentotulkkia. Tällöin käyttäjä kirjoittaa komentoriville käynnistettävän ohjelman nimen tai komentotulkin sisäisen komennon mahdollisine parametreineen ja painaa syöttöpainiketta, jolloin komentotulkki käsittelee käskyn ja tulostaa vastineen näytölle.
+
+Komentoliittymän käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man.
+
+Yleensä kaikki git-komennotkin annetaankin komentotulkkia käyttäen. komennolla "  `git help` " saadaan lista komennoista jotka voidaan suorittaa.
 
 ### 4. Yleisimpiä git-komentoja
 
