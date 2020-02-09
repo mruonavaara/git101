@@ -1,4 +1,4 @@
-# git101
+# git101 ![git-logo](images/Git-logo.png)
 Git-opas Haaga-Helian opiskelijoille
 
 Sisällys
