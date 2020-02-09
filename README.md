@@ -39,7 +39,7 @@ Komentoliittymässä ajetaan tyypillisesti komentotulkkia. Tällöin käyttäjä
 
 Komentoliittymän käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man.
 
-Yleensä kaikki git-komennotkin annetaankin komentotulkkia käyttäen. komennolla "  `git help` " saadaan lista komennoista jotka voidaan suorittaa.
+Yleensä kaikki git-komennot annetaankin komentotulkkia käyttäen. Komennolla `git help` saadaan lista komennoista, jotka voidaan suorittaa.
 
 ### 4. Yleisimpiä git-komentoja
 
