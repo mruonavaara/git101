@@ -66,6 +66,8 @@ Yleensä kaikki git-komennot annetaankin komentotulkkia käyttäen. Komennolla `
 
 - `git branch testing` - luo uuden testing-nimisen haaran
 
+- `git checkout -b <branch name>` - luo uuden haaran ja vaihtaa työtilan tähän uuteen haaraan
+
 - `git merge <branch name>` - yhdistää nimetyn haaran muutokset työtilaan
 
 - `git push` - tallentaa omat lokaalit muutokset etärepositoryyn.
