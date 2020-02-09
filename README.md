@@ -1,5 +1,6 @@
 # git101 ![git-logo](images/Git-logo.png)
 Git-opas Haaga-Helian opiskelijoille
+Auttaa alkuun gitin käytön kanssa!
 
 Sisällys
 1. Mikä on Git ja mihin sitä tarvitaan?
@@ -67,6 +68,7 @@ Yleensä kaikki git-komennot annetaankin komentotulkkia käyttäen. Komennolla `
 - `git push` - tallentaa omat lokaalit muutokset etärepositoryyn.
 
 - `git --help` - Listaa hyödyllisimmät git komennot.
+ 
 
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
 Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla 
