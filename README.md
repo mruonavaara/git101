@@ -59,6 +59,8 @@ Yleensä kaikki git-komennot annetaankin komentotulkkia käyttäen. Komennolla `
 
 - `git reset` - tyhjentää tiedostot staged tilasta, eli jos olet tehnyt git add jonkun tiedoston niin git reset poistaa sen tiedoston staged tilasta
 
+- `git rm <file name>` - poistaa tiedoston ja asettaa tiedoston poiston staged-tilaan, jonka jälkeen tiedoston poisto voidaan commitoida (jos halutaan poistaa kansio, käytetään laajenninta -r, eli `git rm -r <folder name>`)
+
 - `git checkout` - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version
 - `git checkout <branch name>` - vaihtaa työtilan nimettyyn haaraan
 
@@ -73,6 +75,7 @@ Yleensä kaikki git-komennot annetaankin komentotulkkia käyttäen. Komennolla `
 - `git push` - tallentaa omat lokaalit muutokset etärepositoryyn.
 
 - `git --help` - Listaa hyödyllisimmät git komennot.
+
  
 
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
