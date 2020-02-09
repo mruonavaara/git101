@@ -62,6 +62,8 @@ Yleensä kaikki git-komennot annetaankin komentotulkkia käyttäen. Komennolla `
 - `git checkout` - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version
 - `git checkout <branch name>` - vaihtaa työtilan nimettyyn haaraan
 
+- `git revert <commit>` - jos olet jo commitoinut muutokset ja haluatkin palata takaisin aikaisempaan tilaan
+
 - `git branch testing` - luo uuden testing-nimisen haaran
 
 - `git merge <branch name>` - yhdistää nimetyn haaran muutokset työtilaan
