@@ -95,7 +95,7 @@ Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijain
 Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
 
  Tällöin on käsin ratkaistava konfliktit ja valittava pidettävät koodit. Git ilmoittaa, missä kansiossa konflikti on tapahtunut ja toisensa poissulkevat commitit on eroteltu tiedostossa:
- - <<<<<< = kertoo,mistä konflikti alkaa
- - ====== = erottaa muutokset haarojen välillä
- - >>>>>> = ilmoittaa, milloin konflikti loppuu
+ - `<<<<<<` kertoo,mistä konflikti alkaa
+ - `======` erottaa muutokset haarojen välillä
+ - `>>>>>>` ilmoittaa, milloin konflikti loppuu
  Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit ja commitoi koodi.
