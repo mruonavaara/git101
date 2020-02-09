@@ -12,7 +12,7 @@ Sisällys
 8. Merge conflict! Mitä tapahtui, mitä teen?
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
-Git on versionhallinta. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia toisin sanoen varmuuskopio koodista. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhalinnan avulla tehdyt muutokset on helppo dokumentoida. Git on Ilmainen. Git on Hajautettu, siinä ei siis ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
+Git on versionhallinta. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia. Toisin sanoen varmuuskopio koodista. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhalinnan avulla tehdyt muutokset on helppo dokumentoida. Git on Ilmainen. Git on hajautettu, siinä ei siis ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
 
 ### 2. Git:n asennus
 Git:n käyttämiseksi on git-ohjelmisto oltava asennettuna tietokoneella, jolla sitä halutaan käyttää. Git-ohjelmiston asentamiseksi löytyy varmasti useita eri ohjeita ympäri internettiä, alla git:n omat ohjeet
@@ -55,16 +55,18 @@ Yleensä kaikki git-komennot annetaankin komentotulkkia käyttäen. Komennolla `
 
 - `git diff` - näyttää erot tiedostojen työtila versioissa verrattuna local repossa oleviin versioihin. Eli näyttää muutokset, joita ei ole commitettu
 
-- `git reset` - tyhjentää filut staged tilasta, eli jos olet tehnyt git add jonkun tiedoston niin git reset poistaa sen tiedoston staged tilasta
+- `git reset` - tyhjentää tiedostot staged tilasta, eli jos olet tehnyt git add jonkun tiedoston niin git reset poistaa sen tiedoston staged tilasta
 
 - `git checkout` - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version
+- `git checkout <branch name>` - vaihtaa työtilan nimettyyn haaraan
 
 - `git push` - tallentaa omat lokaalit muutokset etärepositoryyn.
 
 - `git --help` - Listaa hyödyllisimmät git komennot.
 
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
-Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn.
+Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla 
+`cd <kansio>`
 Anna sitten seuraavat komennot:
 1. `git init`
 2. `git add .`
