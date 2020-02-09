@@ -2,14 +2,14 @@
 Git-opas Haaga-Helian opiskelijoille
 
 Sisällys
-1. Mikä on Git ja mihin sitä tarvitaan?
-2. Git:n asennus
-3. Komentorivin käyttö
-4. Yleisimpiä git-komentoja
-5. Ensimmäisen repositoryn luonti omalle koneelle
-6. Miten viedä muutokset omasta repositorystä etärepositoryyn
-7. Haarat ja miksi niitä tarvitaan
-8. Merge conflict! Mitä tapahtui, mitä teen?
+1. [Mikä on Git ja mihin sitä tarvitaan?](#1-mikä-git-on-ja-mihin-sitä-tarvitaan)
+2. [Git:n asennus](#2-gitn-asennus)
+3. [Komentorivin käyttö](#3-komentotulkin-käyttö)
+4. [Yleisimpiä git-komentoja](#4-yleisimpiä-git-komentoja)
+5. [Ensimmäisen repositoryn luonti omalle koneelle](#5ensimmäisen-repositoryn-luonti-omalle-koneelle)
+6. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
+7. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
+8. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
 Git on versionhallinta. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia toisin sanoen varmuuskopio koodista. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhalinnan avulla tehdyt muutokset on helppo dokumentoida. Git on Ilmainen. Git on Hajautettu, siinä ei siis ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
@@ -34,7 +34,7 @@ Git on versionhallinta. Versionhallinnalla tarkoitetaan palvelua, joka säilytt�
 
 - `git reset` - tyhjentää filut staged tilasta, eli jos olet tehnyt git add jonkun tiedoston niin git reset poistaa sen tiedoston staged tilasta
 
-- `git checkout` - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version
+- `git checkout` - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version 
 
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
 Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn. 
