@@ -114,6 +114,8 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 
 
 
+
+
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
 Avaa Bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla
 `cd <kansio>`
@@ -148,3 +150,6 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
  - `>>>>>>` ilmoittaa, milloin konflikti loppuu
 
  Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+
+### 9. Muita huomioita
+- `.gitignore` - on tiedosto, jossa voidaan määritellä etärepositoriosta pois jätettävät tiedostot. Gitignore tiedostoa hyödyntämällä voimme jättää tarpeettomat ja mahdollisesti arkaluontoiset tiedot (salasanat tai muut kehityksessä tarvittavat tiedot) pois julkisesta etärepositoriosta.
