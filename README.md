@@ -37,15 +37,14 @@ Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää
 Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perusteelliset ohjeet eri editorien asettamiseksi löytyy [täältä](https://git-scm.com/book/tr/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor).
 
 ### 3. Komentorivin käyttö
-Komentorivi tai komentoliittymä on tapa kommunikoida tietokoneen kanssa. Toisin sanoen komentorivin kautta voidaan tietokoneelle antaa komentoja, joiden tarkoituksena on kehottaa tietokonetta suorittamaan jokin toiminto (esimerkiksi tiedoston kopionti tai ohjelman suoritus). 
-
-Komentoliittymässä ajetaan tyypillisesti komentotulkkia. Tällöin käyttäjä kirjoittaa komentoriville käynnistettävän ohjelman nimen tai komentotulkin sisäisen komennon mahdollisine parametreineen ja painaa syöttöpainiketta, jolloin komentotulkki käsittelee käskyn ja tulostaa vastineen näytölle.
+Komentorivi tai komentoliittymä on tapa kommunikoida tietokoneen kanssa. Komentoliittymässä ajetaan tyypillisesti komentotulkkia. Tällöin käyttäjä kirjoittaa komentoriville käynnistettävän ohjelman nimen tai komentotulkin sisäisen komennon mahdollisine parametreineen ja painaa syöttöpainiketta, jolloin komentotulkki käsittelee käskyn ja tulostaa vastineen näytölle.
 
 Komentoliittymän käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man.
 
+Komentotulkkeja on kuitenkin [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, ettei kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on huomata, että unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on yleensä eri tulkki, kuin Windows käyttöjärjestelmissä.
+
 Yleensä kaikki git-komennot annetaankin komentotulkkia käyttäen. Komennolla `git help` saadaan lista komennoista, jotka voidaan suorittaa.
 
-Komentoliittymässä ajetaan komentotulkkia joka on tietokoneohjelma, jolla ohjataan käyttöjärjestelmää. Komentotulkkeja on useita
 ### 4. Yleisimpiä git-komentoja
 
 - `git init` - luo paikallisen tyhjän repositoryn
