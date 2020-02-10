@@ -35,7 +35,9 @@ Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää
 Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perusteelliset ohjeet eri editorien asettamiseksi löytyy [täältä](https://git-scm.com/book/tr/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor).
 
 ### 3. Komentorivin käyttö
+Komentorivi tai komentoliittymä on tapa kommunikoida tietokoneen kanssa. Toisin sanoen komentorivin kautta voidaan tietokoneelle antaa komentoja, joiden tarkoituksena on kehottaa tietokonetta suorittamaan jokin toiminto (esimerkiksi tiedoston kopionti tai ohjelman suoritus). 
 
+Komentoliittymässä ajetaan komentotulkkia joka on tietokoneohjelma, jolla ohjataan käyttöjärjestelmää. Komentotulkkeja on useita
 ### 4. Yleisimpiä git-komentoja
 
 - `git init` - luo paikallisen tyhjän repositoryn
