@@ -11,8 +11,7 @@ Sisällysluettelo
 6. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
 7. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
 8. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
-9. [Muita huomoita](#9-muita-huomioita)
-
+9. [Kaikkea ei tarvitse commitoida - gitignore](#9-kaikkea-ei-tarvitse-commitoida---gitignore)
 
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
