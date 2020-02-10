@@ -1,8 +1,8 @@
-# git101 ![git-logo](images/Git-logo.png)
-Git-opas Haaga-Helian opiskelijoille<br>
+# Git 101 ![git-logo](images/Git-logo.png)
+Git-opas Haaga-Helian opiskelijoille.<br>
 Auttaa alkuun Gitin käytön kanssa!
 
-Sisällys
+Sisällysluettelo
 1. [Mikä on Git ja mihin sitä tarvitaan?](#1-mikä-git-on-ja-mihin-sitä-tarvitaan)
 2. [Git:n asennus](#2-gitn-asennus)
 3. [Komentorivin käyttö](#3-komentotulkin-käyttö)
