@@ -124,7 +124,7 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 Avaa Bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla
 `cd <kansio>`
 
-Voit myös luoda Bashin kautta kansion johon haluat reposirotyn tehdä komennoilla `mkdir <kansion nimi>` jonka jälkeen siirtyä kansioon `cd <kansio>`
+Voit myös luoda Bashin kautta kansion johon haluat reposirotyn tehdä komennoilla `mkdir <kansion nimi>` jonka jälkeen siirtyä kansioon komennolla `cd <kansio>`
 
 Anna sitten seuraavat komennot:
 1. `git init`
