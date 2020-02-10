@@ -70,6 +70,10 @@ Yleensä kaikki git-komennot annetaankin komentotulkkia käyttäen. Komennolla `
 
 - `git checkout -b <branch name>` - luo uuden haaran ja vaihtaa työtilan tähän uuteen haaraan
 
+- `git fetch <nameOfTheRemoteRepo>` - lataa remote repositoryn tiedot paikalliseen repositoryyn, mutta ei muuta paikallista repoa
+
+- `git pull <remotenNimi>` - hakee nykyisen haaran tiedot etä-reposta ja tekee mergen automaattisesti
+
 - `git merge <branch name>` - yhdistää nimetyn haaran muutokset työtilaan
 
 - `git push` - tallentaa omat lokaalit muutokset etärepositoryyn.
