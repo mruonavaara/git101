@@ -65,6 +65,10 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 
 ### 4. Yleisimpiä git-komentoja
 
+- `git config --global user.name <username>` - Asettaa käyttäjälle nimen, joka näkyy käyttäjän tekemissä commiteissa.
+
+- `git config --global user.email <email>` - Asettaa käyttäjälle sähköpostin, joka näkyy käyttäjän tekemissä commiteissa.
+
 - `git init` - luo paikallisen tyhjän repositoryn
 
 - `git add .` - vertaa hakemistoa local repoon ja siirtää kaikki muutokset tilaan staged, eli nyt ne ovat valmiita commitoitavaksi local repoon. Koskee myös tiedoston luomisia ja poistamisia.
