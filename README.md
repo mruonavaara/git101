@@ -75,42 +75,43 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 
 - `git config --global user.email <email>` - Asettaa käyttäjälle sähköpostin, joka näkyy käyttäjän tekemissä commiteissa.
 
-- `git init` - luo paikallisen tyhjän repositoryn
+- `git init` - Luo paikallisen tyhjän repositoryn
 
-- `git add .` - vertaa hakemistoa local repoon ja siirtää kaikki muutokset tilaan staged, eli nyt ne ovat valmiita commitoitavaksi local repoon. Koskee myös tiedoston luomisia ja poistamisia.
+- `git add .` - Vertaa hakemistoa local repoon ja siirtää kaikki muutokset tilaan staged, eli nyt ne ovat valmiita commitoitavaksi local repoon. Koskee myös tiedoston luomisia ja poistamisia.
 
-- `git commit` - tallettaa staged tilassa olevat tiedostot local repositoryyn.
+- `git commit` - Tallettaa staged tilassa olevat tiedostot local repositoryyn.
 
-- `git commit --amend` - tällä voit lisätä edelliseen committiin muutoksia, jotka unohdit tehdä (ennen sitä stageta muutokset normaalisti git add:lla)
+- `git commit --amend` - Tällä voit lisätä edelliseen committiin muutoksia, jotka unohdit tehdä (ennen sitä stageta muutokset normaalisti git add:lla).
 
-- `git status` - näyttää staged tilassa olevat tiedostot
+- `git status` - Näyttää staged tilassa olevat tiedostot.
 
-- `git diff` - näyttää erot tiedostojen työtila versioissa verrattuna local repossa oleviin versioihin. Eli näyttää muutokset, joita ei ole commitettu
+- `git diff` - Näyttää erot tiedostojen työtila versioissa verrattuna local repossa oleviin versioihin. Eli näyttää muutokset, joita ei ole commitettu.
 
-- `git reset` - tyhjentää tiedostot staged tilasta, eli jos olet tehnyt git add jonkun tiedoston niin git reset poistaa sen tiedoston staged tilasta
+- `git reset` - Tyhjentää tiedostot staged tilasta, eli jos olet tehnyt git add jonkun tiedoston niin git reset poistaa sen tiedoston staged tilasta.
 
-- `git rm <file name>` - poistaa tiedoston ja asettaa tiedoston poiston staged-tilaan, jonka jälkeen tiedoston poisto voidaan commitoida (jos halutaan poistaa kansio, käytetään laajenninta -r, eli `git rm -r <folder name>`)
+- `git rm <file name>` - Poistaa tiedoston ja asettaa tiedoston poiston staged-tilaan, jonka jälkeen tiedoston poisto voidaan commitoida (jos halutaan poistaa kansio, käytetään laajenninta -r, eli `git rm -r <folder name>`).
 
-- `git checkout` - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version mukaiseksi
-- `git checkout <branch name>` - vaihtaa työtilan nimettyyn haaraan
+- `git checkout` - Poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version mukaiseksi.
 
-- `git revert <commit>` - jos olet jo commitoinut muutokset ja haluatkin palata takaisin aikaisempaan tilaan
+- `git checkout <branch name>` - Vaihtaa työtilan nimettyyn haaraan.
 
-- `git branch testing` - luo uuden testing-nimisen haaran
+- `git revert <commit>` - Jos olet jo commitoinut muutokset ja haluatkin palata takaisin aikaisempaan tilaan.
 
-- `git checkout -b <branch name>` - luo uuden haaran ja vaihtaa työtilan tähän uuteen haaraan
+- `git branch testing` - Luo uuden testing-nimisen haaran.
 
-- `git fetch <nameOfTheRemoteRepo>` - lataa remote repositoryn tiedot paikalliseen repositoryyn, mutta ei muuta paikallista repoa
+- `git checkout -b <branch name>` - Luo uuden haaran ja vaihtaa työtilan tähän uuteen haaraan.
 
-- `git pull <remotenNimi>` - hakee nykyisen haaran tiedot etä-reposta ja tekee mergen automaattisesti
+- `git fetch <nameOfTheRemoteRepo>` - Lataa remote repositoryn tiedot paikalliseen repositoryyn, mutta ei muuta paikallista repoa.
 
-- `git merge <branch name>` - yhdistää nimetyn haaran muutokset työtilaan
+- `git pull <remotenNimi>` - Hakee nykyisen haaran tiedot etä-reposta ja tekee mergen automaattisesti.
 
-- `git push` - tallentaa omat lokaalit muutokset etärepositoryyn.
+- `git merge <branch name>` - Yhdistää nimetyn haaran muutokset työtilaan.
 
-- `git --help` - Listaa hyödyllisimmät git komennot
+- `git push` - Tallentaa omat lokaalit muutokset etärepositoryyn.
 
-- `git clone <repository-url>` - Kloonaa etärepositoryn paikalliseen repositoryyn
+- `git --help` - Listaa hyödyllisimmät git komennot.
+
+- `git clone <repository-url>` - Kloonaa etärepositoryn paikalliseen repositoryyn.
 
 
 
