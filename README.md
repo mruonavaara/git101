@@ -115,10 +115,6 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 
 - `git clone <repository-url>` - Kloonaa etärepositoryn paikalliseen repositoryyn.
 
-
-
-
-
 ### 5. Ensimmäisen repositoryn luonti omalle koneelle
 
 Avaa Bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla
@@ -138,14 +134,14 @@ Anna sitten seuraavat komennot:
 ### 7. Haarat ja miksi niitä tarvitaan
 Haarat `branch` ovat mainio keino pitää saman projektikokonaisuuden eri kehityisvaiheita erillään toisistaan kuitenkin pitäen ne samassa repositoryssä. Yleisimpiä haarakehyksiä ja haarojen käyttöä erilaisissa projekteissa löytyy [tästä linkistä](https://nvie.com/posts/a-successful-git-branching-model/).
 
-Luvusta 4 löytyy git-komentoja, joilla luoda haaroja, navigoida eri haarojen välillä sekä yhdistää haaroja.
-
 Haarojen tarkoitusperä on siis pitää esimerkiksi kehityksessä olevan sovelluksen valmiit testatut osat master haarassa ja toteuttaa testausta sekä jatkokehitystä esimerkiksi development haarassa. Lisäksi voidaan hyvin käyttää omia haaroja ei niin tärkeille komponenteille tai ideoille.
 Tällä tavoin ohjelmistokehittäjä voi turvata ettei mikään erillinen osuus projektissa vaikuta mihinkään muuhun, ennenkuin hän näin päättää ja yhdistää `merge` haaran masteriin.
 
 Ennen kuin siirryt haaroista toiseen, muista aina commitoida muutoksesi! Staging-alue ei ole riippuvainen mistään haarasta, joten jos jätät staging-alueella olevat muutokset committoimatta ja vaihdat haaraa, nämä samat muutokset säilyvät staging-alueella. Muutokset siirtyvät haaraan vasta commit-komennon jälkeen.
 
 Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijaintina täydelliselle koodille mitä ei tulla enää muuttamaan.
+
+[Luvusta 4](#4-yleisimpiä-git-komentoja) löytyy git-komentoja, joilla luoda haaroja, navigoida eri haarojen välillä sekä yhdistää haaroja.
 
 
 ### 8. Merge conflict! Mitä tapahtui, mitä teen?
