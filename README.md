@@ -12,6 +12,7 @@ Sisällys
 7. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
 8. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
 
+
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
 Git on versionhallintajärjestelmä. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia, eli toisin sanoen varmuuskopioi sitä. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhallinnan avulla tehdyt muutokset on helppo dokumentoida. Git on ilmainen ja hajautettu, eli siinä ei ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
 
@@ -140,3 +141,7 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
  - `>>>>>>` ilmoittaa, milloin konflikti loppuu
 
  Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+
+
+### 9. Kaikkea ei tarvitse commitoida - gitignore
+Usein repository sisältää myös tiedostoja, joiden muutoksia ei syystä tai toisesta haluta seurata versinhallinnassa. Luomalla repositoryyn `.gitignore` -nimisen tiedoston on mahdollista määrittää tiedostoja tai hakemistoja, jotka git jättää versionhallinnassa huomioimatta.
