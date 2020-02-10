@@ -141,7 +141,7 @@ Ennen kuin siirryt haaroista toiseen, muista aina commitoida muutoksesi! Staging
 
 Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijaintina täydelliselle koodille mitä ei tulla enää muuttamaan.
 
-[Luvusta 4](#4-yleisimpiä-git-komentoja) löytyy git-komentoja, joilla luoda haaroja, navigoida eri haarojen välillä sekä yhdistää haaroja.
+[Luvusta 4](#4-yleisimpiä-git-komentoja) löydät erilaisia git-komentoja, joilla luoda haaroja, navigoida eri haarojen välillä sekä yhdistää haaroja.
 
 
 ### 8. Merge conflict! Mitä tapahtui, mitä teen?
