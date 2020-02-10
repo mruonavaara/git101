@@ -1,4 +1,4 @@
-# git101 ![git-logo](images/Git-logo.png)
+# Git 101 ![git-logo](images/Git-logo.png)
 Git-opas Haaga-Helian opiskelijoille<br>
 Auttaa alkuun gitin käytön kanssa!
 
@@ -139,4 +139,4 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
  - `======` erottaa muutokset haarojen välillä
  - `>>>>>>` ilmoittaa, milloin konflikti loppuu
 
- Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+ Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
