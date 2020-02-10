@@ -26,9 +26,11 @@ Git:n käyttämiseksi on git-ohjelmisto oltava asennettuna tietokoneella, jolla 
 Jokaiseen versionhallintaan talletettavaan muutokseen tallennetaan sen tehneen käyttäjän nimi ja sähköpostiosoite. Git-ohjelmiston asentamisen jälkeen olisikin hyvä asettaa käyttäjätiedot komennoilla:
 
 - `git config --global user.name "<username>"`
-- `git config --global user.email <email>`
+- `git config --global user.email "<email>"`
 
-`<username>` ja `<email>` kohdat korvataan omalla nimellä ja sähköpostilla. Käyttäjätiedot tarvitsee asettaa vain kerran tietokoneelle. --global -tarkentimella tiedot asetetaan siten, että asetukset ovat tietokoneen käyttäjäkohtaiset.
+`<username>` ja `<email>` kohdat korvataan omalla nimellä ja sähköpostilla. Käyttäjätiedot tarvitsee asettaa vain kerran tietokoneelle. --global -tarkentimella tiedot asetetaan siten, että asetukset ovat tietokoneen käyttäjäkohtaiset. Halutessaan voi myös tallentaa käyttäjätietoihin tässä oletus-editorin konfliktien ratkomista varten. Tätä komentoa käyttäen editori avautuu automaattisesti, kun mergessä on konflikti:
+
+- `git config --global core.editor "<editor> --wait"`
 
 ##### 2.1.2 Tekstieditori
 Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää tekstieditoria. Ohjelmiston asentamisen jälkeen oletusarvoinen tekstieditori on [vi](https://fi.wikipedia.org/wiki/Vi). Vi:n käyttäminen voi tuntu haastavalta (ohjeita tosin löytyy esim [täältä](https://fi.wikipedia.org/wiki/Vi#Peruskomennot)), joten git-ohjelmistossa on mahdollista vaihtaa tekstieditoria komennolla:
@@ -130,4 +132,4 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
  - `<<<<<<` kertoo,mistä konflikti alkaa
  - `======` erottaa muutokset haarojen välillä
  - `>>>>>>` ilmoittaa, milloin konflikti loppuu
- Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit ja commitoi koodi.
+ Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi.
