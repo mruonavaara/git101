@@ -1,5 +1,5 @@
 # git101 ![git-logo](images/Git-logo.png)
-Git-opas Haaga-Helian opiskelijoille
+Git-opas Haaga-Helian opiskelijoille<br>
 Auttaa alkuun gitin käytön kanssa!
 
 Sisällys
@@ -33,7 +33,7 @@ Jokaiseen versionhallintaan talletettavaan muutokseen tallennetaan sen tehneen k
 - `git config --global core.editor "<editor> --wait"`
 
 ##### 2.1.2 Tekstieditori
-Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää tekstieditoria. Ohjelmiston asentamisen jälkeen oletusarvoinen tekstieditori on [vi](https://fi.wikipedia.org/wiki/Vi). Vi:n käyttäminen voi tuntu haastavalta (ohjeita tosin löytyy esim [täältä](https://fi.wikipedia.org/wiki/Vi#Peruskomennot)), joten git-ohjelmistossa on mahdollista vaihtaa tekstieditoria komennolla:
+Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää tekstieditoria. Ohjelmiston asentamisen jälkeen oletusarvoinen tekstieditori on [Vi](https://fi.wikipedia.org/wiki/Vi). Vi:n käyttäminen voi tuntu haastavalta (ohjeita tosin löytyy esim [täältä](https://fi.wikipedia.org/wiki/Vi#Peruskomennot)), joten git-ohjelmistossa on mahdollista vaihtaa tekstieditoria komennolla:
 - `git config --global core.editor "<editor-and-options>"`
 
 Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perusteelliset ohjeet eri editorien asettamiseksi löytyy [täältä](https://git-scm.com/book/tr/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor).
@@ -41,7 +41,7 @@ Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perustee
 ### 3. Komentorivin käyttö
 Komentorivi tai komentoliittymä on tapa kommunikoida tietokoneen kanssa. Komentoliittymässä ajetaan tyypillisesti komentotulkkia. Tällöin käyttäjä kirjoittaa komentoriville käynnistettävän ohjelman nimen tai komentotulkin sisäisen komennon mahdollisine parametreineen ja painaa syöttöpainiketta, jolloin komentotulkki käsittelee käskyn ja tulostaa vastineen näytölle.
 
-Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, ettei kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on tietää, että unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on yleensä eri tulkki, kuin Windows käyttöjärjestelmissä. On kuitenkin hyvä huomata, että esimerkiksi [git for windows](https://gitforwindows.org/) asennuksen yhteydessä asennetaan bash-emulaattori, jossa käytetään Unix-shell komentoja.
+Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, ettei kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on tietää, että Unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on yleensä eri tulkki, kuin Windows käyttöjärjestelmissä. On kuitenkin hyvä huomata, että esimerkiksi [git for windows](https://gitforwindows.org/) asennuksen yhteydessä asennetaan Bash-emulaattori, jossa käytetään Unix-shell komentoja.
 
 Komentoliittymän käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man. Komennot annetaan komeentoriville muodossa:
 
@@ -61,7 +61,7 @@ Nykyisen työhakemiston saa selville shell-tulkissa komennolla `pwd` - **p**rint
 
 Työhakemistossa olevat tiedostot ja alihakemistot saa selville suorittamalla komennon `ls` (ei toimi command promptissa, ks [`dir`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)). `ls` -komennon voi suortittaa myös esimerkiksi vaihtoehdolla (option) `-a`, jolloin listataan myös tiedostot ja kansiot, jotka alkavat `.` merkillä ('piilotetut tiedostot/kansiot'). Esimerkiksi `git init` -komennolla luodaa `.git` hakemisto, joka ei näy pelkällä `ls` -komennolla, mutta näkyy suorittamalla `ls -a`. Komentoa voi myös käyttää antamalla sille argumenttina hakemisto, jonka tiedostot halutaan listata. Esimerkiksi suorittamalla `ls -a /c` -komento, saadaan listattua __kaikki__ tiedosto ja hakemistot, jotka sijaitsevat `/c` -hakemistossa (ts c-asema).
 
-Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irectory. Komento toimii sekä command promptissa, että shellissä. Ilman argumentteja annettaessa, Unix-ympäristössä (linux & mac), komennon suorittaminen vaihtaa työhakemistoksi käyttäjän kotihakemiston ja windows-ympäristössä tulostetaan senhetkinen työhakemisto. Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan olevan uusi työhakemisto. Argumentin hakemisto voidaan antaa joko täydellisenä polkuna (absolute path) tai suhteellisena polkuna (relative path). Esimerkiksi, jos työhakemistoksi halutaan vaihtaa `C:\Users\Git-user\Documents`, voidaan käyttää ___mistä tahansa___ työhakemistosta komentoa: `cd /C/Users/Git-user/Documents` (__shell__) TAI jos nykyinen työhakemisto on `C:\Users\Git-user` antamalla komento: `cd Documents`.
+Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irectory. Komento toimii sekä command promptissa, että shellissä. Ilman argumentteja annettaessa, Unix-ympäristössä (Linux & Mac), komennon suorittaminen vaihtaa työhakemistoksi käyttäjän kotihakemiston ja Windows-ympäristössä tulostetaan sen hetkinen työhakemisto. Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan olevan uusi työhakemisto. Argumentin hakemisto voidaan antaa joko täydellisenä polkuna (absolute path) tai suhteellisena polkuna (relative path). Esimerkiksi, jos työhakemistoksi halutaan vaihtaa `C:\Users\Git-user\Documents`, voidaan käyttää ___mistä tahansa___ työhakemistosta komentoa: `cd /C/Users/Git-user/Documents` (__shell__) TAI jos nykyinen työhakemisto on `C:\Users\Git-user` antamalla komento: `cd Documents`.
 
 ### 4. Yleisimpiä git-komentoja
 
@@ -104,12 +104,12 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 
 - `git --help` - Listaa hyödyllisimmät git komennot.
 
-- `git clone <repository-url>` - Kloonaa epärepositoryn paikalliseen repositoryyn.
+- `git clone <repository-url>` - Kloonaa etärepositoryn paikalliseen repositoryyn.
 
 
 
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
-Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla
+Avaa Bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla
 `cd <kansio>`
 Anna sitten seuraavat komennot:
 1. `git init`
@@ -139,4 +139,4 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
  - `======` erottaa muutokset haarojen välillä
  - `>>>>>>` ilmoittaa, milloin konflikti loppuu
 
- Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi.Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+ Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
