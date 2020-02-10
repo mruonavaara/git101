@@ -14,6 +14,7 @@ Sisällysluettelo
 9. [Muita huomoita](#9-muita-huomioita)
 
 
+
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
 Git on versionhallintajärjestelmä. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia, eli toisin sanoen varmuuskopioi sitä. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhallinnan avulla tehdyt muutokset on helppo dokumentoida. Git on ilmainen ja hajautettu, eli siinä ei ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
 
@@ -154,5 +155,6 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
 
  Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
-### 9. Muita huomioita
-- `.gitignore` - on tiedosto, jossa voidaan määritellä etärepositoriosta pois jätettävät tiedostot. Gitignore tiedostoa hyödyntämällä voimme jättää tarpeettomat ja mahdollisesti arkaluontoiset tiedot (salasanat tai muut kehityksessä tarvittavat tiedot) pois etärepositoriosta.
+
+### 9. Kaikkea ei tarvitse commitoida - gitignore
+Usein repository sisältää myös tiedostoja, joiden muutoksia ei syystä tai toisesta haluta seurata versinhallinnassa. Luomalla repositoryyn `.gitignore` -nimisen tiedoston on mahdollista määrittää tiedostoja tai hakemistoja, jotka git jättää versionhallinnassa huomioimatta.
