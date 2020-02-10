@@ -100,6 +100,8 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 
 - `git --help` - Listaa hyödyllisimmät git komennot.
 
+- `git clone <repository-url>` - Kloonaa epärepositoryn paikalliseen repositoryyn.
+
  
 
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
