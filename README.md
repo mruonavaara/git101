@@ -22,6 +22,12 @@ Git:n käyttämiseksi Git-ohjelmiston on oltava asennettuna tietokoneella, jolla
 [Git asennusohjeet](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 #### 2.1 Konfigurointi
+Jotta Git:in käyttö olisi mahdollisimman helppoa ja tehokasta, se kannattaa konfiguroida käyttämään tietynlaisia asetuksia ja työkaluja. Konfiguroinnin avulla Git saadaan toimimaan sillä tavalla kuin itse, tai projektitiimi haluaa. 
+
+Konfigurointikomentoja löytyy lukusia, jotka kaikki löytyy komennolla:
+
+- `git config`
+
 ##### 2.1.1 Käyttäjätiedot
 Jokaiseen versionhallintaan talletettavaan muutokseen tallennetaan sen tehneen käyttäjän nimi ja sähköpostiosoite. Git-ohjelmiston asentamisen jälkeen olisikin hyvä asettaa käyttäjätiedot komennoilla:
 
