@@ -45,7 +45,7 @@ Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_i
 
 Komentoliittymän käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man. Komennot annetaan komeentoriville muodossa:
 
-    command param1 param2 param3 … paramN 
+    command param1 param2 param3 … paramN
 
 jossa:
 - command = annettava komento
@@ -102,10 +102,10 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 
 - `git clone <repository-url>` - Kloonaa epärepositoryn paikalliseen repositoryyn.
 
- 
+
 
 ### 5.Ensimmäisen repositoryn luonti omalle koneelle
-Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla 
+Avaa bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla
 `cd <kansio>`
 Anna sitten seuraavat komennot:
 1. `git init`
@@ -134,4 +134,5 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
  - `<<<<<<` kertoo,mistä konflikti alkaa
  - `======` erottaa muutokset haarojen välillä
  - `>>>>>>` ilmoittaa, milloin konflikti loppuu
- Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi.
+
+ Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi.Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
