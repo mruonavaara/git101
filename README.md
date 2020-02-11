@@ -7,11 +7,12 @@ Sisällysluettelo
 2. [Git:n asennus](#2-gitn-asennus)
 3. [Komentorivin käyttö](#3-komentotulkin-käyttö)
 4. [Yleisimpiä git-komentoja](#4-yleisimpiä-git-komentoja)
-5. [Ensimmäisen repositoryn luonti omalle koneelle](#5ensimmäisen-repositoryn-luonti-omalle-koneelle)
-6. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
-7. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
-8. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
-9. [Muita huomoita](#9-muita-huomioita)
+5. [Muita git komentoja](#5-muita-git-komentoja)
+6. [Ensimmäisen repositoryn luonti omalle koneelle](#5ensimmäisen-repositoryn-luonti-omalle-koneelle)
+7. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
+8. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
+9. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
+10. [Muita huomoita](#9-muita-huomioita)
 
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
@@ -164,5 +165,5 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
 
  Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
-### 9. Muita huomioita
+### 10. Muita huomioita
 - `.gitignore` - on tiedosto, jossa voidaan määritellä etärepositoriosta pois jätettävät tiedostot. Gitignore tiedostoa hyödyntämällä voimme jättää tarpeettomat ja mahdollisesti arkaluontoiset tiedot (salasanat tai muut kehityksessä tarvittavat tiedot) pois etärepositoriosta.
