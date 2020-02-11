@@ -115,7 +115,17 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 
 - `git clone <repository-url>` - Kloonaa etärepositoryn paikalliseen repositoryyn.
 
-### 5. Ensimmäisen repositoryn luonti omalle koneelle
+### 5. Muita git komentoja
+
+- `git merge no -ff` - Pakoittaa mergeen kommitin välittämättä siitä onko siihen tullut mitään muutoksia. Tämän avulla haaran olemassaolo tallentuu historiaan vaikka se myöhemmin poistettaisiinkin.
+
+- `git stash` - Piiloittaa haaran missä olet. Voit palauttaa haaran komennolla `git stash apply` (Huom! Kannattaa tehdä vain yksi stash, useimpien stash:en käytöstä voi aiheutua päänvaivaa) Komennolla `git stash drop` voit poistaa kyseisen stash:n.
+
+- `git clean` - Poistaa kaikki untracked-tiedostot, joita ei ole mainittu .gitignore tiedostossa.
+
+- `git tag -a "kommitin_nimi" -m "viestisi"` - Voit kirjata muistiin ns. "leiman" tiettyyn kommittiin. Tämä on hyödyllistä esimerkiksi versioinnin merkinnöissä.
+
+### 6. Ensimmäisen repositoryn luonti omalle koneelle
 
 Avaa Bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla
 `cd <kansio>`
@@ -127,11 +137,11 @@ Anna sitten seuraavat komennot:
 2. `git add .`
 3. `git commit -m 'Ensimmäinen commit'`
 
-### 6. Miten viedä muutokset omasta repositorystä etärepositoryyn
+### 7. Miten viedä muutokset omasta repositorystä etärepositoryyn
 1. `git remote add origin https://github.com/user/example.git`
 2. `git push origin master`
 
-### 7. Haarat ja miksi niitä tarvitaan
+### 8. Haarat ja miksi niitä tarvitaan
 Haarat `branch` ovat mainio keino pitää saman projektikokonaisuuden eri kehityisvaiheita erillään toisistaan kuitenkin pitäen ne samassa repositoryssä. Yleisimpiä haarakehyksiä ja haarojen käyttöä erilaisissa projekteissa löytyy [tästä linkistä](https://nvie.com/posts/a-successful-git-branching-model/).
 
 Haarojen tarkoitusperä on siis pitää esimerkiksi kehityksessä olevan sovelluksen valmiit testatut osat master haarassa ja toteuttaa testausta sekä jatkokehitystä esimerkiksi development haarassa. Lisäksi voidaan hyvin käyttää omia haaroja ei niin tärkeille komponenteille tai ideoille.
@@ -144,7 +154,7 @@ Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijain
 [Luvusta 4](#4-yleisimpiä-git-komentoja) löydät erilaisia git-komentoja, joilla luoda haaroja, navigoida eri haarojen välillä sekä yhdistää haaroja.
 
 
-### 8. Merge conflict! Mitä tapahtui, mitä teen?
+### 9. Merge conflict! Mitä tapahtui, mitä teen?
 Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja Git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
 
  Tällöin on käsin ratkaistava konfliktit ja valittava pidettävät koodit. Git ilmoittaa, missä kansiossa konflikti on tapahtunut ja toisensa poissulkevat commitit on eroteltu tiedostossa:
