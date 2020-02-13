@@ -25,7 +25,7 @@ Git:n käyttämiseksi Git-ohjelmiston on oltava asennettuna tietokoneella, jolla
 [Git asennusohjeet](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 #### 2.1 Konfigurointi
-Jotta Git:in käyttö olisi mahdollisimman helppoa ja tehokasta, se kannattaa konfiguroida käyttämään tietynlaisia asetuksia ja työkaluja. Konfiguroinnin avulla Git saadaan toimimaan sillä tavalla kuin itse, tai projektitiimi haluaa. 
+Jotta Git:in käyttö olisi mahdollisimman helppoa ja tehokasta, se kannattaa konfiguroida käyttämään tietynlaisia asetuksia ja työkaluja. Konfiguroinnin avulla Git saadaan toimimaan sillä tavalla kuin itse, tai projektitiimi haluaa.
 
 Konfigurointikomentoja löytyy lukusia, jotka kaikki löytyy komennolla:
 
@@ -163,7 +163,12 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
  - `======` erottaa muutokset haarojen välillä
  - `>>>>>>` ilmoittaa, milloin konflikti loppuu
 
- Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+ Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] (https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
 ### 10. Muita huomioita
 - `.gitignore` - on tiedosto, jossa voidaan määritellä etärepositoriosta pois jätettävät tiedostot. Gitignore tiedostoa hyödyntämällä voimme jättää tarpeettomat ja mahdollisesti arkaluontoiset tiedot (salasanat tai muut kehityksessä tarvittavat tiedot) pois etärepositoriosta.
+
+### 11. SSH-avain
+
+SSH-protokollan avulla voit muodostaa yhteyden etäpalvelimiin ja palveluihin ja todentaa ne..SSH-avaimet ovat tapa tunnistaa luotettavat tietokoneet ilman salasanoja.  Jotta kirjautuminen onnistuisi, tarvitsee ensin luoda julkinen (public) ja salainen (private) avain. Sitten julkinen avain kopioidaan kohdekoneelle.
+`ssh-keygen` -komennolla voit luoda avainparin. Komennon jälkeen varmennetaan tiedostojen tallennuspaikka sekä sen jälkeen sille voi määritellä salasanan.
