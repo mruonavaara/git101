@@ -167,3 +167,9 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
 
 ### 10. Muita huomioita
 - `.gitignore` - on tiedosto, jossa voidaan määritellä etärepositoriosta pois jätettävät tiedostot. Gitignore tiedostoa hyödyntämällä voimme jättää tarpeettomat ja mahdollisesti arkaluontoiset tiedot (salasanat tai muut kehityksessä tarvittavat tiedot) pois etärepositoriosta.
+
+- `git config` - voidaan antaa gitille uusia asetuksia
+- `git config --global --list` listaa käytössä olevat globaalit asetukset
+
+Esim.
+- `git config --global core.autocrlf false` Kertoo gitille, että ei muuta rivinvaihtoja kun tehdään commit. Hyödyllistä, jos projektia on kehittämässä henkilöitä, joilla on eri käyttöjärjestelmiä. Käyttöjärjestelmät rivittävät tiedostoja eri tavoin.
