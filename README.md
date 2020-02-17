@@ -8,11 +8,11 @@ Sisällysluettelo
 3. [Komentorivin käyttö](#3-komentotulkin-käyttö)
 4. [Yleisimpiä git-komentoja](#4-yleisimpiä-git-komentoja)
 5. [Muita git komentoja](#5-muita-git-komentoja)
-6. [Ensimmäisen repositoryn luonti omalle koneelle](#5ensimmäisen-repositoryn-luonti-omalle-koneelle)
-7. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
-8. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
-9. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
-10. [Muita huomoita](#9-muita-huomioita)
+6. [Ensimmäisen repositoryn luonti omalle koneelle](#6ensimmäisen-repositoryn-luonti-omalle-koneelle)
+7. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#7-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
+8. [Haarat ja miksi niitä tarvitaan](#8-haarat-ja-miksi-niitä-tarvitaan)
+9. [Merge conflict! Mitä tapahtui, mitä teen?](#9-merge-conflict-mitä-tapahtui-mitä-teen)
+10. [Muita huomoita](#10-muita-huomioita)
 
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
