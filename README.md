@@ -48,29 +48,118 @@ Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää
 Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perusteelliset ohjeet eri editorien asettamiseksi löytyy [täältä](https://git-scm.com/book/tr/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor).
 
 ### 3. Komentorivin käyttö
-Komentorivi tai komentoliittymä on tapa kommunikoida tietokoneen kanssa. Komentoliittymässä ajetaan tyypillisesti komentotulkkia. Tällöin käyttäjä kirjoittaa komentoriville käynnistettävän ohjelman nimen tai komentotulkin sisäisen komennon mahdollisine parametreineen ja painaa syöttöpainiketta, jolloin komentotulkki käsittelee käskyn ja tulostaa vastineen näytölle.
+Käyttöliittymä on tapa kommunikoida tietokoneen kanssa. Nykyään suurin osa ihmisistä on tottunut graafiseen käyttöliittymään, jossa tietokoneen kansioihin siirrytään kaksoisklikkaamalla kansion kuvaketta, ohjelmat suoritetaan klikkaamalla ohjelman kuvaketta ja niin edelleen.
 
-Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, etteivät kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on tietää, että Unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on yleensä eri tulkki kuin Windows -käyttöjärjestelmissä. On kuitenkin hyvä huomata, että esimerkiksi [git for windows](https://gitforwindows.org/) asennuksen yhteydessä asennetaan Bash-emulaattori, jossa käytetään Unix-shell -komentoja.
+__Komentorivi__, __komentoliittymä__ tai __terminaali__ (englanniksi command line tai terminal) on tekstikäyttöliitymä. Teksikäyttöliittymässä kansioiden välillä siirtyminen, ohjelmien suorittaminen jne tapahtuu kirjoittamalla komentoja ja antamalla näppäinyhdistelmiä.
 
-Komentoliittymän käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man. Komennot annetaan komentoriville muodossa:
+Komentoliittymässä ajetaan tyypillisesti __komentotulkkia__. Käyttäjä kirjoittaa komentoliittymään (ts komentoriville tai terminaaliin) käynnistettävän ohjelman nimen tai komentotulkin sisäisen komennon mahdollisine parametreineen ja painaa syöttöpainiketta, jolloin komentotulkki käsittelee käskyn ja tulostaa vastineen näytölle (tai suorittaa ohjelman).
 
-    command param1 param2 param3 … paramN
+Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, etteivät kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on tietää, että Unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on eri oletus-tulkki kuin Windows-käyttöjärjestelmissä. 
 
+[git for windows](https://gitforwindows.org/) asennuksen yhteydessä asennetaan Bash-emulaattori, jossa käytetään Unix-shell -komentoja. Tämä siis mahdollistaa bash-komentojen käyttämisen myös Windows-käyttöjärjestelmissä.
+>HUOM! Kaikki bash komennot ei toimi Git Bashissa
+
+Yksinkertaisuuden vuoksi, tässä oppassa tullaan keskittymään nimen omaan bash-komentoihin ja kaikki esitellyt komennot toimivat myös Git Bashissa. Git-komentoja ei käsitellä tässä luvussa, ne löytyvät [luvusta 4](#4-yleisimpiä-git-komentoja)
+
+#### 3.1 Komentorivin käynnistäminen
+Jos tietokoneeseen on asennettu git for windows, Git Bash:n saa avattua klikkaamalla missä tahansa hakemistossa (kansio) hiiren oikealla näppäimellä ja valitsemalla `Git Bash Here`. Klikkaus käynnistää komentoliittymän, jonka __työhakemisto__ (tästä myöhemmin lisää) on se hakemisto, johon hiiren oikealla näppäimellä klikattiin.
+
+MacOS tietokoneessa `terminal` löytyy Finderistä:
+> Applications>Utility>Terminal
+
+tai painamalla `cmd + space` (avaa Spotlight Search) ja kirjoittamalla `terminal`.
+
+Ubuntussa (ja ilmeisesti useissa muissa Linux-käyttöjärjestelmissä) komentorivin saa auki painamalla `CTRL + ALT + T`.
+
+>HUOM! Jos käyttää Visual Studio Code-ohjelmaa, on hyvä tietää, että siitä löytyy integroitu terminaali. Terminaalin saa näkyviin kirjoittamalla Command Palette:en (aukeaa painamalla `F1`) terminal ja valitsemalla `View: Toggle Integrated Terminal`.  
+Integroidusta terminaalista tulee tarkastaa, mikä __komentotulkki__ on käytössä.
+
+Komentorivi näyttää käynnistymisen jälkeen Git-Bashissä seuraavalta:
+```
+<tietokoneen-nimi>@<käyttäjä> MINGW64 ~<hakemisto>
+$
+```
+ja terminal MacOS:ssä seuraavalta:
+```
+<tietokoneen-nimi>:<hakemisto> <käyttäjä>$
+```
+Vaikka erojakin on, on hyvä huomata, että molemmista löytyy lähes sama informaatio, ehkä tärkeimpänä `<hakemisto>`, jolla tarkoitetaan nykyistä työhakemistoa (tästä lisää myöhemmin). Jos `<hakemisto>`n tilalla on pelkkä `~` -merkki tarkoittaa tämä, että nykyinen hakemisto on käyttäjän oletushakemisto (kotihakemisto).
+
+>HUOM! Molemmissa komentoriveissä viimeinen merkki on `$`. Tätä ei siis tarvitse itse kirjoittaa komentoriville, vaikka se saattaa jossain ohjeissa olla kirjoitettu ennen annettavaa komentoa
+
+#### 3.2 Työhakemisto
+On tärkeää ymmärtää, että komentorivia käyttäessä työskennellään aina jossain työhakemistossa (ts working directory tai kansio). Kaikki annetut komennot suoritetaan tässä työhakemistossa ellei toisin komenneta.
+
+Esimerkiksi komennon `git init` suorittaminen luo paikallisen tyhjän repositorion sen hetkiseen työhakemistoon.
+
+Työhakemistoa ei tule sekoittaa __kotihakemistoon__. Kotihakemisto on hakemisto, jossa oletusarvoisesti sijaitsee käyttäjän asetustiedostot ja muut omat tiedostot. Kotihakemistoa kuvataan komentorivillä (myös Git Bash) usein merkillä `~`.
+
+#### 3.3 Komennot
+Komennot annetaan komentoriville muodossa:
+```
+command param1 param2 param3 … paramN
+```
 jossa:
-- command = annettava komento
-- param 1, param2, jne = komennon vaihtoehdot (options) ja argumentit
+- `command` = annettava komento
+- `param 1`, `param2` jne = komennon vaihtoehdot (options) ja argumentit
 
 Komennon vaihtoehtoina (options) voidaan esimerkiksi antaa tarkennuksia, miten komento suoritetaan ja argumentteina esimerkiksi mille tiedostolle komento suoritetaan.
 
-Yleensä kaikki git-komennot annetaankin komentoriviä käyttäen. Komennolla `git help` saadaan lista komennoista, jotka voidaan suorittaa.
+Komentorivin komentojen käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla `help` tai `man`.
 
-Komentorivin komennoista ja käytöstä löytyy internetistä varmasti miljoonia ohjeita, [ihan](http://appro.mit.jyu.fi/itkp1011/luennot/cli/) [suomeksikin](http://users.jyu.fi/~nieminen/ohj1/materiaalia/tyokaluohjeet/komentorivi_selviytyminen.html). Tärkeintä on ehkä ymmärtää, että komentorivia käyttäessä työskennellään aina jossain työhakemistossa (ts working directory tai kansio). Kaikki annetut komennot suoritetaan tässä työhakemistossa ellei toisin komenneta. Esimerkiksi komennon `git init` suorittaminen luo paikallisen tyhjän repositorion sen hetkiseen __työhakemistoon__.
+>HUOM! `man` komennolla avataan parametrina annettavan komennon `man`-sivu, josta pääsee pois painamalla `q`
 
-Nykyisen työhakemiston saa selville shell-tulkissa komennolla `pwd` - **p**rint **w**orking **d**irectory. Komento toimii myös Windowsin PowerShellissä, mutta ei command promptissa (cmd).
+Esimerkki: Haluan käyttää komentoa `cd`, jolla siirrytään työhakemistosta toiseen, mutta en ole täysin varma, miten komentoa käytetään. Kirjoitan siis komentoriville
+```
+help cd
+```
+ja painan entteriä. Komentotulkki suorittaa tällöin komennon `help` parametrilla `cd` ja tulostaa jotain seuraavan laista:
+```
+cd: cd [-L|-P] [dir]
+    <Hirveä määrä tekstiä>
+    ...
+    <Ja vielä usella rivillä :( >
+```
+Tulostuksen ensimmäisellä rivillä on ns 'synopsis' komennon käytöstä. Toisin sanoen siinä lukee, mitä optioita ja mitä argumentteina voi antaa komennon parametreina. <Hirveässä määrässä tekstiä> taas kerrotaan, mitä mikäkin parametri tekee.
 
-Työhakemistossa olevat tiedostot ja alihakemistot saa selville suorittamalla komennon `ls` (ei toimi command promptissa, ks [`dir`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)). `ls` -komennon voi suorittaa myös esimerkiksi vaihtoehdolla (option) `-a`, jolloin listataan myös tiedostot ja kansiot, jotka alkavat `.` merkillä ('piilotetut tiedostot/kansiot'). Esimerkiksi `git init` -komennolla luodaan `.git` hakemisto, joka ei näy pelkällä `ls` -komennolla, mutta näkyy suorittamalla `ls -a`. Komentoa voi myös käyttää antamalla sille argumenttina hakemisto, jonka tiedostot halutaan listata. Esimerkiksi suorittamalla `ls -a /c` -komento, saadaan listattua __kaikki__ tiedosto ja hakemistot, jotka sijaitsevat `/c` -hakemistossa (ts c-asema).
+>HUOM! Kaikille komennoille ei löydy `help` komennolla apua, eikä Git Bash tue `man` -komentoa, mutta ongelmatilanteissa kannattaa kokeilla helpin antamista komennon ___parameterina___ (ei siis komentona). Esimerkiksi `help ls` komennon antaminen ei tulosta neuvoja, mutta `ls --help` tulostaa.
 
-Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irectory. Komento toimii sekä command promptissa että shellissä. Ilman argumentteja annettaessa Unix-ympäristössä (Linux & Mac) komennon suorittaminen vaihtaa työhakemistoksi käyttäjän kotihakemiston ja Windows-ympäristössä tulostetaan sen hetkinen työhakemisto. Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan olevan uusi työhakemisto. Argumentin hakemisto voidaan antaa joko täydellisenä polkuna (absolute path) tai suhteellisena polkuna (relative path). Esimerkiksi, jos työhakemistoksi halutaan vaihtaa `C:\Users\Git-user\Documents`, voidaan käyttää ___mistä tahansa___ työhakemistosta komentoa: `cd /C/Users/Git-user/Documents` (__shell__) TAI jos nykyinen työhakemisto on `C:\Users\Git-user` antamalla komento: `cd Documents`.
+>HUOM2! Toinen vaihtoehto on etsiä esimerkiksi googlesta `bash <komento> manual`
+
+
+Komentorivin komennoista ja käytöstä löytyy lisää ohjeita internetistä, [ihan](http://appro.mit.jyu.fi/itkp1011/luennot/cli/) [suomeksikin](http://users.jyu.fi/~nieminen/ohj1/materiaalia/tyokaluohjeet/komentorivi_selviytyminen.html). 
+
+[Tässä bash komentoja fiksusti kategorisoituna](https://courses.cs.washington.edu/courses/cse390a/14au/bash.html)
+
+[Tässä bash manuaali](http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html)
+
+
+##### 3.3.1 Yleisiä komentoja
+Nykyisen työhakemiston saa selville komennolla
+```
+pwd
+```
+**p**rint **w**orking **d**irectory.
+
+Työhakemistossa olevat tiedostot ja alihakemistot saa selville suorittamalla komennon
+```
+ls
+```
+`ls` -komennon voi suorittaa myös esimerkiksi vaihtoehdolla (option) `-a`, jolloin listataan myös tiedostot ja kansiot, jotka alkavat `.` merkillä ('piilotetut tiedostot/kansiot').
+
+Esimerkiksi `git init` -komennolla luodaan `.git` hakemisto, joka ei näy pelkällä `ls` -komennolla, mutta näkyy suorittamalla `ls -a`.
+
+Komentoa voi myös käyttää antamalla sille argumenttina hakemisto, jonka tiedostot halutaan listata. Esimerkiksi suorittamalla `ls -a /c` -komento, saadaan listattua __kaikki__ tiedosto ja hakemistot, jotka sijaitsevat `/c` -hakemistossa (ts c-asema).
+
+Nykyistä työhakemistoa vaihdetaan komennolla
+```
+cd
+```
+**c**hange **d**irectory
+
+>HUOM! Ilman argumentteja annettaessa komennon suorittaminen vaihtaa työhakemistoksi käyttäjän kotihakemiston.
+
+Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan olevan uusi työhakemisto. Argumentin hakemisto voidaan antaa joko täydellisenä polkuna (absolute path) tai suhteellisena polkuna (relative path). Esimerkiksi, jos työhakemistoksi halutaan vaihtaa `C:\Users\Git-user\Documents`, voidaan käyttää ___mistä tahansa___ työhakemistosta komentoa: `cd /C/Users/Git-user/Documents` TAI jos nykyinen työhakemisto on `C:\Users\Git-user` antamalla komento: `cd Documents`.
 
 ### 4. Yleisimpiä git-komentoja
 
