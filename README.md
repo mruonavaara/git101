@@ -82,15 +82,16 @@ ja terminal MacOS:ssä seuraavalta:
 ```
 <tietokoneen-nimi>:<hakemisto> <käyttäjä>$
 ```
+Vaikka erojakin on, on hyvä huomata, että molemmista löytyy lähes sama informaatio, ehkä tärkeimpänä `<hakemisto>`, jolla tarkoitetaan nykyistä työhakemistoa (tästä lisää myöhemmin). Jos `<hakemisto>`n tilalla on pelkkä `~` -merkki tarkoittaa tämä, että nykyinen hakemisto on käyttäjän oletushakemisto.
 
-
+>HUOM! Molemmissa komentoriveissä viimeinen merkki on `$`. Tätä ei siis tarvitse itse kirjoittaa komentoriville, vaikka se saattaa jossain ohjeissa olla kirjoitettu ennen annettavaa komentoa
 
 #### 3.2 Komennot
 Komentorivin komentojen käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla `help` tai `man`.
 
 Komennot annetaan komentoriville muodossa:
 ```
-$ command param1 param2 param3 … paramN
+command param1 param2 param3 … paramN
 ```
 jossa:
 - `command` = annettava komento
@@ -100,7 +101,7 @@ Komennon vaihtoehtoina (options) voidaan esimerkiksi antaa tarkennuksia, miten k
 
 Esimerkki: Haluan käyttää komentoa `cd`, jolla siirrytään työhakemistosta toiseen, mutta en ole täysin varma, miten komentoa käytetään. Kirjoitan siis komentoriville:
 ```
-$ help cd
+help cd
 ```
 
 
