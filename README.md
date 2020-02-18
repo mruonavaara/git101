@@ -59,9 +59,20 @@ Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_i
 Yksinkertaisuuden vuoksi, tässä oppassa tullaan keskittymään nimen omaan bash-komentoihin ja etenkin niihin, joita tarvitaan git:n.
 
 #### 3.1 Komentorivin käynnistäminen
+Jos tietokoneeseen on asennettu git for windows, Git Bash:n saa avattua klikkaamalla missä tahansa hakemistossa (kansio) hiiren oikealla näppäimellä ja valitsemalla `Git Bash Here`. Klikkaus käynnistää komentoliittymän, jonka __työhakemisto__ (tästä myöhemmin lisää) on se hakemisto, johon hiiren oikealla näppäimellä klikattiin.
+
+MacOS tietokoneessa `terminal` löytyy Finderistä:
+> Applications>Utility>Terminal
+
+tai painamalla `cmd + space` (avaa Spotlight Search) ja kirjoittamalla `terminal`.
+
+Ubuntussa (ja ilmeisesti useissa muissa Linux-käyttöjärjestelmissä) komentorivin saa auki painamalla `CTRL + ALT + T`.
+
+>HUOM! Jos käyttää Visual Studio Code-ohjelmaa, on hyvä tietää, että siitä löytyy integroitu terminaali. Terminaalin saa näkyviin kirjoittamalla Command Palette:en (aukeaa painamalla `F1`) terminal ja valitsemalla `View: Toggle Integrated Terminal`.  
+Integroidusta terminaalista tulee tarkastaa, mikä __komentotulkki__ on käytössä
 
 #### 3.2 Komennot
-Komentoliittymän käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man. Komennot annetaan komentoriville muodossa:
+Komentoliittymän komentojen käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man. Komennot annetaan komentoriville muodossa:
 
     command param1 param2 param3 … paramN
 
