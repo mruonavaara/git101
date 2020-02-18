@@ -87,8 +87,6 @@ Vaikka erojakin on, on hyvä huomata, että molemmista löytyy lähes sama infor
 >HUOM! Molemmissa komentoriveissä viimeinen merkki on `$`. Tätä ei siis tarvitse itse kirjoittaa komentoriville, vaikka se saattaa jossain ohjeissa olla kirjoitettu ennen annettavaa komentoa
 
 #### 3.2 Komennot
-Komentorivin komentojen käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla `help` tai `man`.
-
 Komennot annetaan komentoriville muodossa:
 ```
 command param1 param2 param3 … paramN
@@ -99,21 +97,37 @@ jossa:
 
 Komennon vaihtoehtoina (options) voidaan esimerkiksi antaa tarkennuksia, miten komento suoritetaan ja argumentteina esimerkiksi mille tiedostolle komento suoritetaan.
 
-Esimerkki: Haluan käyttää komentoa `cd`, jolla siirrytään työhakemistosta toiseen, mutta en ole täysin varma, miten komentoa käytetään. Kirjoitan siis komentoriville:
+Komentorivin komentojen käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla `help` tai `man`.
+
+Esimerkki: Haluan käyttää komentoa `cd`, jolla siirrytään työhakemistosta toiseen, mutta en ole täysin varma, miten komentoa käytetään. Kirjoitan siis komentoriville
 ```
 help cd
 ```
+ja painan entteriä. Komentotulkki suorittaa tällöin komennon `help` parametrilla `cd` ja tulostaa jotain seuraavan laista:
+```
+cd: cd [-L|-P] [dir]
+    <Hirveä määrä tekstiä>
+    <Ja vielä usella rivillä :( >
+```
+Tulostuksen ensimmäisellä rivillä on ns 'synopsis' komennon käytöstä. Toisin sanoen siinä lukee, mitä optioita ja mitä argumentteina voi antaa komennon parametreina. <Hirveässä määrässä tekstiä> taas kerrotaan, mitä mikäkin parametri tekee.
+
+>HUOM! Kaikille komennoille ei löydy `help` komennolla apua, eikä Git Bash tue `man` -komentoa, mutta ongelmatilanteissa kannattaa kokeilla helpin antamista komennon ___parameterina___ (ei siis komentona). Esimerkiksi `help ls` komennon antaminen ei tulosta neuvoja, mutta `ls --help` tulostaa.
+
+>HUOM2! Toinen vaihtoehto on etsiä esimerkiksi googlesta `bash <komento> manual`
 
 
-Komennolla `git help` saadaan lista git-komennoista, jotka voidaan suorittaa.
+Komentorivin komennoista ja käytöstä löytyy lisää ohjeita internetistä, [ihan](http://appro.mit.jyu.fi/itkp1011/luennot/cli/) [suomeksikin](http://users.jyu.fi/~nieminen/ohj1/materiaalia/tyokaluohjeet/komentorivi_selviytyminen.html). 
 
-Komentorivin komennoista ja käytöstä löytyy internetistä varmasti miljoonia ohjeita, [ihan](http://appro.mit.jyu.fi/itkp1011/luennot/cli/) [suomeksikin](http://users.jyu.fi/~nieminen/ohj1/materiaalia/tyokaluohjeet/komentorivi_selviytyminen.html). Tärkeintä on ehkä ymmärtää, että komentorivia käyttäessä työskennellään aina jossain työhakemistossa (ts working directory tai kansio). Kaikki annetut komennot suoritetaan tässä työhakemistossa ellei toisin komenneta. Esimerkiksi komennon `git init` suorittaminen luo paikallisen tyhjän repositorion sen hetkiseen __työhakemistoon__.
+
+Tärkeintä on ehkä ymmärtää, että komentorivia käyttäessä työskennellään aina jossain työhakemistossa (ts working directory tai kansio). Kaikki annetut komennot suoritetaan tässä työhakemistossa ellei toisin komenneta. Esimerkiksi komennon `git init` suorittaminen luo paikallisen tyhjän repositorion sen hetkiseen __työhakemistoon__.
 
 Nykyisen työhakemiston saa selville shell-tulkissa komennolla `pwd` - **p**rint **w**orking **d**irectory. Komento toimii myös Windowsin PowerShellissä, mutta ei command promptissa (cmd).
 
 Työhakemistossa olevat tiedostot ja alihakemistot saa selville suorittamalla komennon `ls` (ei toimi command promptissa, ks [`dir`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)). `ls` -komennon voi suorittaa myös esimerkiksi vaihtoehdolla (option) `-a`, jolloin listataan myös tiedostot ja kansiot, jotka alkavat `.` merkillä ('piilotetut tiedostot/kansiot'). Esimerkiksi `git init` -komennolla luodaan `.git` hakemisto, joka ei näy pelkällä `ls` -komennolla, mutta näkyy suorittamalla `ls -a`. Komentoa voi myös käyttää antamalla sille argumenttina hakemisto, jonka tiedostot halutaan listata. Esimerkiksi suorittamalla `ls -a /c` -komento, saadaan listattua __kaikki__ tiedosto ja hakemistot, jotka sijaitsevat `/c` -hakemistossa (ts c-asema).
 
 Nykyistä työhakemistoa vaihdetaan komennolla `cd` - **c**hange **d**irectory. Komento toimii sekä command promptissa että shellissä. Ilman argumentteja annettaessa Unix-ympäristössä (Linux & Mac) komennon suorittaminen vaihtaa työhakemistoksi käyttäjän kotihakemiston ja Windows-ympäristössä tulostetaan sen hetkinen työhakemisto. Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan olevan uusi työhakemisto. Argumentin hakemisto voidaan antaa joko täydellisenä polkuna (absolute path) tai suhteellisena polkuna (relative path). Esimerkiksi, jos työhakemistoksi halutaan vaihtaa `C:\Users\Git-user\Documents`, voidaan käyttää ___mistä tahansa___ työhakemistosta komentoa: `cd /C/Users/Git-user/Documents` (__shell__) TAI jos nykyinen työhakemisto on `C:\Users\Git-user` antamalla komento: `cd Documents`.
+
+Komennolla `git`, parametrilla `help` saadaan lista git-komennoista, jotka voidaan suorittaa.
 
 ### 4. Yleisimpiä git-komentoja
 
