@@ -57,8 +57,9 @@ Komentoliittymässä ajetaan tyypillisesti __komentotulkkia__. Käyttäjä kirjo
 Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, etteivät kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on tietää, että Unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on eri oletus-tulkki kuin Windows-käyttöjärjestelmissä. 
 
 [git for windows](https://gitforwindows.org/) asennuksen yhteydessä asennetaan Bash-emulaattori, jossa käytetään Unix-shell -komentoja. Tämä siis mahdollistaa bash-komentojen käyttämisen myös Windows-käyttöjärjestelmissä.
+>HUOM! Kaikki bash komennot ei toimi Git Bashissa
 
-Yksinkertaisuuden vuoksi, tässä oppassa tullaan keskittymään nimen omaan bash-komentoihin. Git-komentoja ei käsitellä tässä luvussa, ne löytyvät [luvusta 4](#4-yleisimpiä-git-komentoja)
+Yksinkertaisuuden vuoksi, tässä oppassa tullaan keskittymään nimen omaan bash-komentoihin ja kaikki esitellyt komennot toimivat myös Git Bashissa. Git-komentoja ei käsitellä tässä luvussa, ne löytyvät [luvusta 4](#4-yleisimpiä-git-komentoja)
 
 #### 3.1 Komentorivin käynnistäminen
 Jos tietokoneeseen on asennettu git for windows, Git Bash:n saa avattua klikkaamalla missä tahansa hakemistossa (kansio) hiiren oikealla näppäimellä ja valitsemalla `Git Bash Here`. Klikkaus käynnistää komentoliittymän, jonka __työhakemisto__ (tästä myöhemmin lisää) on se hakemisto, johon hiiren oikealla näppäimellä klikattiin.
@@ -82,11 +83,18 @@ ja terminal MacOS:ssä seuraavalta:
 ```
 <tietokoneen-nimi>:<hakemisto> <käyttäjä>$
 ```
-Vaikka erojakin on, on hyvä huomata, että molemmista löytyy lähes sama informaatio, ehkä tärkeimpänä `<hakemisto>`, jolla tarkoitetaan nykyistä työhakemistoa (tästä lisää myöhemmin). Jos `<hakemisto>`n tilalla on pelkkä `~` -merkki tarkoittaa tämä, että nykyinen hakemisto on käyttäjän oletushakemisto.
+Vaikka erojakin on, on hyvä huomata, että molemmista löytyy lähes sama informaatio, ehkä tärkeimpänä `<hakemisto>`, jolla tarkoitetaan nykyistä työhakemistoa (tästä lisää myöhemmin). Jos `<hakemisto>`n tilalla on pelkkä `~` -merkki tarkoittaa tämä, että nykyinen hakemisto on käyttäjän oletushakemisto (kotihakemisto).
 
 >HUOM! Molemmissa komentoriveissä viimeinen merkki on `$`. Tätä ei siis tarvitse itse kirjoittaa komentoriville, vaikka se saattaa jossain ohjeissa olla kirjoitettu ennen annettavaa komentoa
 
-#### 3.2 Komennot
+#### 3.2 Työhakemisto
+On tärkeää ymmärtää, että komentorivia käyttäessä työskennellään aina jossain työhakemistossa (ts working directory tai kansio). Kaikki annetut komennot suoritetaan tässä työhakemistossa ellei toisin komenneta.
+
+Esimerkiksi komennon `git init` suorittaminen luo paikallisen tyhjän repositorion sen hetkiseen työhakemistoon.
+
+Työhakemistoa ei tule sekoittaa __kotihakemistoon__. Kotihakemisto on hakemisto, jossa oletusarvoisesti sijaitsee käyttäjän asetustiedostot ja muut omat tiedostot. Kotihakemistoa kuvataan komentorivillä (myös Git Bash) usein merkillä `~`.
+
+#### 3.3 Komennot
 Komennot annetaan komentoriville muodossa:
 ```
 command param1 param2 param3 … paramN
@@ -109,6 +117,7 @@ ja painan entteriä. Komentotulkki suorittaa tällöin komennon `help` parametri
 ```
 cd: cd [-L|-P] [dir]
     <Hirveä määrä tekstiä>
+    ...
     <Ja vielä usella rivillä :( >
 ```
 Tulostuksen ensimmäisellä rivillä on ns 'synopsis' komennon käytöstä. Toisin sanoen siinä lukee, mitä optioita ja mitä argumentteina voi antaa komennon parametreina. <Hirveässä määrässä tekstiä> taas kerrotaan, mitä mikäkin parametri tekee.
@@ -125,7 +134,7 @@ Komentorivin komennoista ja käytöstä löytyy lisää ohjeita internetistä, [
 [Tässä bash manuaali](http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html)
 
 
-##### 3.2.1 Yleisiä komentoja
+##### 3.3.1 Yleisiä komentoja
 Nykyisen työhakemiston saa selville komennolla
 ```
 pwd
