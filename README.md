@@ -48,7 +48,9 @@ Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää
 Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perusteelliset ohjeet eri editorien asettamiseksi löytyy [täältä](https://git-scm.com/book/tr/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor).
 
 ### 3. Komentorivin käyttö
-Käyttöliittymä on tapa kommunikoida tietokoneen kanssa. Nykyään suurin osa ihmisistä on tottunut graafiseen käyttöliittymään, jossa tietokoneen kansioihin siirrytään kaksoisklikkaamalla kansion kuvaketta, ohjelmat suoritetaan klikkaamalla ohjelman kuvaketta ja niin edelleen. __Komentorivi__, __komentoliittymä__ tai __terminaali__ (englanniksi command line tai terminal) on tekstikäyttöliitymä. Teksikäyttöliittymässä kansioiden välillä siirtyminen, ohjelmien suorittaminen jne tapahtuu kirjoittamalla komentoja ja antamalla näppäinyhdistelmiä.
+Käyttöliittymä on tapa kommunikoida tietokoneen kanssa. Nykyään suurin osa ihmisistä on tottunut graafiseen käyttöliittymään, jossa tietokoneen kansioihin siirrytään kaksoisklikkaamalla kansion kuvaketta, ohjelmat suoritetaan klikkaamalla ohjelman kuvaketta ja niin edelleen.
+
+__Komentorivi__, __komentoliittymä__ tai __terminaali__ (englanniksi command line tai terminal) on tekstikäyttöliitymä. Teksikäyttöliittymässä kansioiden välillä siirtyminen, ohjelmien suorittaminen jne tapahtuu kirjoittamalla komentoja ja antamalla näppäinyhdistelmiä.
 
 Komentoliittymässä ajetaan tyypillisesti __komentotulkkia__. Käyttäjä kirjoittaa komentoliittymään (ts komentoriville tai terminaaliin) käynnistettävän ohjelman nimen tai komentotulkin sisäisen komennon mahdollisine parametreineen ja painaa syöttöpainiketta, jolloin komentotulkki käsittelee käskyn ja tulostaa vastineen näytölle.
 
@@ -69,20 +71,40 @@ tai painamalla `cmd + space` (avaa Spotlight Search) ja kirjoittamalla `terminal
 Ubuntussa (ja ilmeisesti useissa muissa Linux-käyttöjärjestelmissä) komentorivin saa auki painamalla `CTRL + ALT + T`.
 
 >HUOM! Jos käyttää Visual Studio Code-ohjelmaa, on hyvä tietää, että siitä löytyy integroitu terminaali. Terminaalin saa näkyviin kirjoittamalla Command Palette:en (aukeaa painamalla `F1`) terminal ja valitsemalla `View: Toggle Integrated Terminal`.  
-Integroidusta terminaalista tulee tarkastaa, mikä __komentotulkki__ on käytössä
+Integroidusta terminaalista tulee tarkastaa, mikä __komentotulkki__ on käytössä.
+
+Komentorivi näyttää käynnistymisen jälkeen Git-Bashissä seuraavalta:
+```
+<tietokoneen-nimi>@<käyttäjä> MINGW64 ~<hakemisto>
+$
+```
+ja terminal MacOS:ssä seuraavalta:
+```
+<tietokoneen-nimi>:<hakemisto> <käyttäjä>$
+```
+
+
 
 #### 3.2 Komennot
-Komentoliittymän komentojen käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man. Komennot annetaan komentoriville muodossa:
+Komentorivin komentojen käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla `help` tai `man`.
 
-    command param1 param2 param3 … paramN
-
+Komennot annetaan komentoriville muodossa:
+```
+$ command param1 param2 param3 … paramN
+```
 jossa:
-- command = annettava komento
-- param 1, param2, jne = komennon vaihtoehdot (options) ja argumentit
+- `command` = annettava komento
+- `param 1`, `param2` jne = komennon vaihtoehdot (options) ja argumentit
 
 Komennon vaihtoehtoina (options) voidaan esimerkiksi antaa tarkennuksia, miten komento suoritetaan ja argumentteina esimerkiksi mille tiedostolle komento suoritetaan.
 
-Yleensä kaikki git-komennot annetaankin komentoriviä käyttäen. Komennolla `git help` saadaan lista komennoista, jotka voidaan suorittaa.
+Esimerkki: Haluan käyttää komentoa `cd`, jolla siirrytään työhakemistosta toiseen, mutta en ole täysin varma, miten komentoa käytetään. Kirjoitan siis komentoriville:
+```
+$ help cd
+```
+
+
+Komennolla `git help` saadaan lista git-komennoista, jotka voidaan suorittaa.
 
 Komentorivin komennoista ja käytöstä löytyy internetistä varmasti miljoonia ohjeita, [ihan](http://appro.mit.jyu.fi/itkp1011/luennot/cli/) [suomeksikin](http://users.jyu.fi/~nieminen/ohj1/materiaalia/tyokaluohjeet/komentorivi_selviytyminen.html). Tärkeintä on ehkä ymmärtää, että komentorivia käyttäessä työskennellään aina jossain työhakemistossa (ts working directory tai kansio). Kaikki annetut komennot suoritetaan tässä työhakemistossa ellei toisin komenneta. Esimerkiksi komennon `git init` suorittaminen luo paikallisen tyhjän repositorion sen hetkiseen __työhakemistoon__.
 
