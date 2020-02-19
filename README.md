@@ -199,7 +199,7 @@ Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan
 
 - `git merge <branch name>` - Yhdistää nimetyn haaran muutokset työtilaan.
 
-- `git push` - Tallentaa omat lokaalit muutokset etärepositoryyn.
+- `git push` - Tallentaa omat lokaalit muutokset etärepositoryyn. Push-komennosta lisää kohdassa 7.
 
 - `git --help` - Listaa hyödyllisimmät git komennot.
 
@@ -230,7 +230,7 @@ Anna sitten seuraavat komennot:
 ### 7. Miten viedä muutokset omasta repositorystä etärepositoryyn
 1. `git remote add origin https://github.com/user/example.git`
 2. `git push origin master` 
-- komento vie paikallisen master-haaran origin-repoon
+- komento vie paikallisen master-haaran origin-repoon (origin on etärepositoryn oletusnimi)
 TAI  
 `git push --all`
  jolloin kaikki paikalliset haarat viedään.
