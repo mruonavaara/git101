@@ -229,7 +229,15 @@ Anna sitten seuraavat komennot:
 
 ### 7. Miten viedä muutokset omasta repositorystä etärepositoryyn
 1. `git remote add origin https://github.com/user/example.git`
-2. `git push origin master`
+2. `git push origin master` 
+- komento vie paikallisen master-haaran origin-repoon
+TAI  
+`git push --all`
+ jolloin kaikki paikalliset haarat viedään.
+Jos ensimmäisellä kerralla käytät laajenninta -u (=--set-upstream) haaran etärepository on asetettu oletukseksi ja komennoksi riittää pelkkä
+`git push`
+
+     
 
 ### 8. Haarat ja miksi niitä tarvitaan
 Haarat `branch` ovat mainio keino pitää saman projektikokonaisuuden eri kehityisvaiheita erillään toisistaan kuitenkin pitäen ne samassa repositoryssä. Yleisimpiä haarakehyksiä ja haarojen käyttöä erilaisissa projekteissa löytyy [tästä linkistä](https://nvie.com/posts/a-successful-git-branching-model/).
