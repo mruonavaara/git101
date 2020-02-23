@@ -286,4 +286,13 @@ Esim.
 
 Commit-viestin tarkoituksena on kommentoida, miksi jokin muutos on tehty ja mitä sillä on tarkoitus saada aikaan. Hyvin laaditut commit-viestit ovat arvokasta informaatiota muille kehitystiimin jäsenille ja myöskin kehittäjälle itselleen, jos pitää jäljittää jälkeenpäin, miksi on päädytty tietynlaisiin ratkaisuihin tai muutoksiin. Jotta `git log` -tulosteen seuraaminen olisi helpompaa, olisi hyvä, että viestit on laadittu systemaattisesti tietyn käytännön mukaisesti, jota kaikki kehitystiimin jäsenet noudattavat.
 
+Committiin tulevien muutosten tulisi muodostaa looginen kokonaisuus, josta on helppo kirjoittaa kuvaava viesti. Selkeästi koostetut commitit helpottavat muutosten perumista tai lisäämistä muiden työhön. Commit-viestien käytännöistä kannattaa sopia projektin alussa kaikkien tiimiläisten kesken.
+
+#### Hyvän commit-viestin säännöt:
+- Otsikko alkaa isolla alkukirjaimella ja on korkeintaan 50 merkkiä pitkä
+- Otsikkoviestien verbit ovat samassa aikamuodossa (esim. imperatiivi)
+- Jos on tarpeen antaa yksityiskohtaisempi selvitys muutoksista, se erotetaan otsikkorivistä tyhjällä rivillä (mielellään max. 72 merkkiä)
+
+[Esimerkki hyvästä commit-viestistä](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+
 
