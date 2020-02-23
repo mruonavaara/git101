@@ -18,6 +18,9 @@ Sisällysluettelo
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
 Git on versionhallintajärjestelmä. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia, eli toisin sanoen varmuuskopioi sitä. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhallinnan avulla tehdyt muutokset on helppo dokumentoida. Git on ilmainen ja hajautettu, eli siinä ei ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
 
+#### 1.1 Git:in historia
+Git:in on kehittänyt suomalais-amerikkalainen ohjelmistoinsinööri Linus Torvalds, joka tunnetaan myös Linux kernelin kehittämisestä. Hän kehitti Git:in Linux kernelin versiohallintaa varten. Git julkaistiin ensimmäisen kerran 7. huhtikuuta 2005. Viimeisin vakaa versio Git:istä julkaistiin 17. helmikuuta 2020.
+
 ### 2. Git:n asennus
 Git:n käyttämiseksi Git-ohjelmiston on oltava asennettuna tietokoneella, jolla sitä halutaan käyttää. Git-ohjelmiston asentamiseen löytyy useita eri ohjeita. Alla Git:n omat ohjeet.
 
