@@ -284,4 +284,6 @@ Esim.
 
 ### 11. Commit-viesteistä
 
+Commit-viestin tarkoituksena on kommentoida, miksi jokin muutos on tehty ja mitä sillä on tarkoitus saada aikaan. Hyvin laaditut commit-viestit ovat arvokasta informaatiota muille kehitystiimin jäsenille ja myöskin kehittäjälle itselleen, jos pitää jäljittää jälkeenpäin, miksi on päädytty tietynlaisiin ratkaisuihin tai muutoksiin. Jotta `git log` -tulosteen seuraaminen olisi helpompaa, olisi hyvä, että viestit on laadittu systemaattisesti tietyn käytännön mukaisesti, jota kaikki kehitystiimin jäsenet noudattavat.
+
 
