@@ -13,6 +13,7 @@ Sisällysluettelo
 8. [Haarat ja miksi niitä tarvitaan](#8-haarat-ja-miksi-niitä-tarvitaan)
 9. [Merge conflict! Mitä tapahtui, mitä teen?](#9-merge-conflict-mitä-tapahtui-mitä-teen)
 10. [Muita huomoita](#10-muita-huomioita)
+11. [Mikä ihmeen Github?](#11-mikä-ihmeen-Github)
 
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
@@ -173,3 +174,14 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
 
 Esim.
 - `git config --global core.autocrlf false` Kertoo gitille, että ei muuta rivinvaihtoja kun tehdään commit. Hyödyllistä, jos projektia on kehittämässä henkilöitä, joilla on eri käyttöjärjestelmiä. Käyttöjärjestelmät rivittävät tiedostoja eri tavoin.
+
+
+### 11. Mikä ihmeen Github?
+
+GitHub on verkkosivusto, joka tarjoaa paikan Git-versionhallintaa käyttäville ohjelmakehitysprojekteille. Git itsessään on komentoriviohjelma, jolle Github tarjoaa erään graafisen käyttöliittymän. Gitin lisäksi GitHub tarjoaa projekteille toimintoja kuten bugienseurannan, kehitystoiveet, tehtävien hallinta ja wiki.
+
+Git-versionhallintaa toteutetaan siis paikallisesti, mutta viemällä projektin Githubiin tai vastaavaan palveluun saadaan toteutettua Gitillä etärepository, jonka voi halutessa jakaa muiden käytttöön.
+
+Huhtikuun 2016 GitHubin raportin mukaan sillä oli yli 14 miljoonaa käyttäjää ja yli 35 miljoonaa ohjelmavarastoa. Tämä tekee siitä maailman suurimman lähdekoodi-verkkopalvelun.
+
+[Tutustu Githubiin](https://github.com/)
