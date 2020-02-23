@@ -14,6 +14,8 @@ Sisällysluettelo
 9. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
 10. [Muita huomioita](#9-muita-huomioita)
 11. [Commit-viesteistä](#11-commit-viesteistä)
+12. [Mikä ihmeen Github?](#12-mikä-ihmeen-Github)
+
 
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
@@ -296,3 +298,13 @@ Committiin tulevien muutosten tulisi muodostaa looginen kokonaisuus, josta on he
 [Esimerkki hyvästä commit-viestistä](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 
 
+
+### 12. Mikä ihmeen Github?
+
+GitHub on verkkosivusto, joka tarjoaa paikan Git-versionhallintaa käyttäville ohjelmakehitysprojekteille. Git itsessään on komentoriviohjelma, jolle Github tarjoaa erään graafisen käyttöliittymän. Gitin lisäksi GitHub tarjoaa projekteille toimintoja kuten bugienseurannan, kehitystoiveet, tehtävien hallinta ja wiki.
+
+Git-versionhallintaa toteutetaan siis paikallisesti, mutta viemällä projektin Githubiin tai vastaavaan palveluun saadaan toteutettua Gitillä etärepository, jonka voi halutessa jakaa muiden käytttöön.
+
+Huhtikuun 2016 GitHubin raportin mukaan sillä oli yli 14 miljoonaa käyttäjää ja yli 35 miljoonaa ohjelmavarastoa. Tämä tekee siitä maailman suurimman lähdekoodi-verkkopalvelun.
+
+[Tutustu Githubiin](https://github.com/)
