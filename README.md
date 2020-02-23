@@ -233,6 +233,15 @@ Anna sitten seuraavat komennot:
 2. `git add .`
 3. `git commit -m 'Ensimmäinen commit'`
 
+##### 6.1 Olemassa olevan repositoryn kloonaaminen omalle koneelle
+
+Useasti projektien etä-repository on keskitetty yhteen paikkaan, jolloin yleisin tapa saada repository myös omalle paikalliselle koneelle on kloonata se. Kuten paikallisen repositoryn luominen, myös kloonaaminen on kertaluonteinen tapahtuma. Kloonattu repository tuodaan paikalliseen koneeseen aina kansion sisällä, jolloin sille ei tarvitse välttämättä luoda oma kansiotaan.
+
+Helpoin tapa kloonata etä-repository on painaa projektin GitHub-sivulla vihreää nappia "clone or download" ja kopioda siinä annettu URL. Tämän jälkeen avaa Git Bash ja anna komento: 
+
+`git clone <repo url>`
+
+
 ### 7. Miten viedä muutokset omasta repositorystä etärepositoryyn
 1. `git remote add origin https://github.com/user/example.git`
 2. `git push origin master` 
