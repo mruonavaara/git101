@@ -276,7 +276,7 @@ Tällä tavoin ohjelmistokehittäjä voi turvata ettei mikään erillinen osuus 
 
 Ennen kuin siirryt haaroista toiseen, muista aina commitoida muutoksesi! Staging-alue ei ole riippuvainen mistään haarasta, joten jos jätät staging-alueella olevat muutokset committoimatta ja vaihdat haaraa, nämä samat muutokset säilyvät staging-alueella. Muutokset siirtyvät haaraan vasta commit-komennon jälkeen.
 
-Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijaintina täydelliselle koodille mitä ei tulla enää muuttamaan.
+Yleisesti ottaen masterissa ei koodata mitään, ja se toimiikin vain loppusijaintina täydelliselle koodille, jota ei tulla enää muuttamaan.
 
 [Luvusta 4](#4-yleisimpiä-git-komentoja) löydät erilaisia git-komentoja, joilla luoda haaroja, navigoida eri haarojen välillä sekä yhdistää haaroja.
 
