@@ -9,7 +9,7 @@ Sisällysluettelo
 4. [Git-komentoja](#4-yleisimpiä-git-komentoja)
 5. [Repositoryn luonti omalle koneelle](#5ensimmäisen-repositoryn-luonti-omalle-koneelle)
 6. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
-7. [Hiukan Githubista](#7-hiukan-gitistä)
+7. [Hiukan Githubista](#7-hiukan-githubista)
 8. [Haarat ja miksi niitä tarvitaan](#8-haarat-ja-miksi-niitä-tarvitaan)
 9. [Merge conflict! Mitä tapahtui, mitä teen?](#9-merge-conflict-mitä-tapahtui-mitä-teen)
 10. [Muita huomoita](#10-muita-huomioita)
