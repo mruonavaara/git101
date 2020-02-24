@@ -358,3 +358,4 @@ Suosituimmat Git hosting-palveluntarjojat
 - Bitbucket
 - GitLab
 
+[Linkki videoon, jossa vertaillaan GitHubia ja GitLabia](https://www.youtube.com/watch?v=s8DCpG1PeaU)
