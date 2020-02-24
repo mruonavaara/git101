@@ -6,18 +6,17 @@ Sisällysluettelo
 1. [Mikä on Git ja mihin sitä tarvitaan?](#1-mikä-git-on-ja-mihin-sitä-tarvitaan)
 2. [Git:n asennus](#2-gitn-asennus)
 3. [Komentorivin käyttö](#3-komentotulkin-käyttö)
-4. [Yleisimpiä git-komentoja](#4-yleisimpiä-git-komentoja)
-5. [Muita git komentoja](#5-muita-git-komentoja)
-6. [Ensimmäisen repositoryn luonti omalle koneelle](#6-ensimmäisen-repositoryn-luonti-omalle-koneelle)
-7. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#7-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
+4. [Git-komentoja](#4-yleisimpiä-git-komentoja)
+5. [Repositoryn luonti omalle koneelle](#5ensimmäisen-repositoryn-luonti-omalle-koneelle)
+6. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
+7. [Hiukan Githubista](#7-hiukan-gitistä)
 8. [Haarat ja miksi niitä tarvitaan](#8-haarat-ja-miksi-niitä-tarvitaan)
 9. [Merge conflict! Mitä tapahtui, mitä teen?](#9-merge-conflict-mitä-tapahtui-mitä-teen)
-10. [Muita huomioita](#10-muita-huomioita)
+10. [Muita huomoita](#10-muita-huomioita)
 11. [Commit-viesteistä](#11-commit-viesteistä)
 12. [Mikä ihmeen Github?](#12-mikä-ihmeen-Github)
 13. [SSH-avaimen generointi](#13-ssh-keygen)
 14. [Github Students-pack](#14-Github-Students-pack)
-
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
 Git on versionhallintajärjestelmä. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia, eli toisin sanoen varmuuskopioi sitä. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhallinnan avulla tehdyt muutokset on helppo dokumentoida. Git on ilmainen ja hajautettu, eli siinä ei ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
@@ -212,7 +211,7 @@ Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan
 
 - `git clone <repository-url>` - Kloonaa etärepositoryn paikalliseen repositoryyn.
 
-### 5. Muita git komentoja
+### 4.1 Muita git komentoja
 
 - `git merge no -ff` - Pakoittaa mergeen kommitin välittämättä siitä onko siihen tullut mitään muutoksia. Tämän avulla haaran olemassaolo tallentuu historiaan vaikka se myöhemmin poistettaisiinkin.
 
@@ -222,7 +221,7 @@ Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan
 
 - `git tag -a "kommitin_nimi" -m "viestisi"` - Voit kirjata muistiin ns. "leiman" tiettyyn kommittiin. Tämä on hyödyllistä esimerkiksi versioinnin merkinnöissä.
 
-### 6. Ensimmäisen repositoryn luonti omalle koneelle
+### 5. Ensimmäisen repositoryn luonti omalle koneelle
 
 Avaa Bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla
 `cd <kansio>`
@@ -234,7 +233,8 @@ Anna sitten seuraavat komennot:
 2. `git add .`
 3. `git commit -m 'Ensimmäinen commit'`
 
-#### 6.1 Olemassa olevan repositoryn kloonaaminen omalle koneelle
+<<<<<<< HEAD
+#### 5.1 Olemassa olevan repositoryn kloonaaminen omalle koneelle
 
 Useasti projektien etä-repository on keskitetty yhteen paikkaan, jolloin yleisin tapa saada repository myös omalle paikalliselle koneelle on kloonata se. Kuten paikallisen repositoryn luominen, myös kloonaaminen on kertaluonteinen tapahtuma. Kloonattu repository tuodaan paikalliseen koneeseen aina kansion sisällä, jolloin sille ei tarvitse välttämättä luoda oma kansiotaan.
 
@@ -242,7 +242,7 @@ Helpoin tapa kloonata etä-repository on painaa projektin GitHub-sivulla vihreä
 
 `git clone <repo url>`
 
-##### 6.1.1 Repositoryn kloonaaminen omalle koneelle käyttäen SSH protokollaa
+##### 5.1.1 Repositoryn kloonaaminen omalle koneelle käyttäen SSH protokollaa
 
 Jossain tapauksissa etä-repository vaatii SSH-avainta suorittaakseen kloonauksen onnistuneesti. Git kuitenkin onneksi tukee muutamia verkkoprotokollia, kuten SSH protokollaa, jonka avulla tiedot voidaan antaa yhdessä komennossa. [Luvusta 11](#11-ssh-avain) löydät enemmän tietoa SSH-protokollasta ja miksi sitä käytetään.
 
@@ -251,7 +251,8 @@ Etä-repositoryn kloonaaminen käyttäen SSH protokollaa tapahtuu hieman eri tav
 `git@HOSTNAME:USERNAME/REPOSITORYNAME.git`
 
 
-### 7. Miten viedä muutokset omasta repositorystä etärepositoryyn
+### 6. Miten viedä muutokset omasta repositorystä etärepositoryyn
+
 1. `git remote add origin https://github.com/user/example.git`
 2. `git push origin master`
 - komento vie paikallisen master-haaran origin-repoon (origin on etärepositoryn oletusnimi)
@@ -262,6 +263,10 @@ Jos ensimmäisellä kerralla käytät laajenninta -u (=--set-upstream) haaran et
 `git push`
 
 
+### 7. Hiukan Githubista
+Git itsessään on vain komentorivillä toimiva ohjelma, joten sen käytön helpottamiseksi on kehitetty lukuisia eri graafisia käyttöliittymiä.
+Niistä Github on ainakin tällä hetkellä käytetyin, ja omien raporttiensa mukaan se on virallisesti "maailman suurin lähdekoodi-verkkopalvelu".
+Kun siis puhutaan Gitin käytössä etärepositoreista, niin niillä tarkoitetaan Githubissa (tai Githubin kaltaisessa palvelussa) säilytettävää ohjelmakoodia. Githubilla on kuitenkin nykyään myös muita palveluita, esimerkiksi erilaisia työkaluja projektinhallinnan helpottamiseksi.
 
 ### 8. Haarat ja miksi niitä tarvitaan
 Haarat `branch` ovat mainio keino pitää saman projektikokonaisuuden eri kehityisvaiheita erillään toisistaan kuitenkin pitäen ne samassa repositoryssä. Yleisimpiä haarakehyksiä ja haarojen käyttöä erilaisissa projekteissa löytyy [tästä linkistä](https://nvie.com/posts/a-successful-git-branching-model/).
@@ -281,7 +286,7 @@ Hyvässä haaroituksessa master haarassa julkaistaan vain valmiita versioita. De
 ![git-malli](images/git-model.png)
 
 ### 9. Merge conflict! Mitä tapahtui, mitä teen?
-Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja Git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
+Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
 
  Tällöin on käsin ratkaistava konfliktit ja valittava pidettävät koodit. Git ilmoittaa, missä kansiossa konflikti on tapahtunut ja toisensa poissulkevat commitit on eroteltu tiedostossa:
  - `<<<<<<` kertoo,mistä konflikti alkaa
