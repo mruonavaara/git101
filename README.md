@@ -15,6 +15,7 @@ Sisällysluettelo
 10. [Muita huomioita](#9-muita-huomioita)
 11. [Commit-viesteistä](#11-commit-viesteistä)
 12. [Mikä ihmeen Github?](#12-mikä-ihmeen-Github)
+13. [SSH-avaimen generointi](#13-ssh-keygen)
 
 
 
@@ -31,7 +32,7 @@ Git:n käyttämiseksi Git-ohjelmiston on oltava asennettuna tietokoneella, jolla
 [Git asennusohjeet](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 #### 2.1 Konfigurointi
-Jotta Git:in käyttö olisi mahdollisimman helppoa ja tehokasta, se kannattaa konfiguroida käyttämään tietynlaisia asetuksia ja työkaluja. Konfiguroinnin avulla Git saadaan toimimaan sillä tavalla kuin itse, tai projektitiimi haluaa. 
+Jotta Git:in käyttö olisi mahdollisimman helppoa ja tehokasta, se kannattaa konfiguroida käyttämään tietynlaisia asetuksia ja työkaluja. Konfiguroinnin avulla Git saadaan toimimaan sillä tavalla kuin itse, tai projektitiimi haluaa.
 
 Konfigurointikomentoja löytyy lukusia, jotka kaikki löytyy komennolla:
 
@@ -60,7 +61,7 @@ __Komentorivi__, __komentoliittymä__ tai __terminaali__ (englanniksi command li
 
 Komentoliittymässä ajetaan tyypillisesti __komentotulkkia__. Käyttäjä kirjoittaa komentoliittymään (ts komentoriville tai terminaaliin) käynnistettävän ohjelman nimen tai komentotulkin sisäisen komennon mahdollisine parametreineen ja painaa syöttöpainiketta, jolloin komentotulkki käsittelee käskyn ja tulostaa vastineen näytölle (tai suorittaa ohjelman).
 
-Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, etteivät kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on tietää, että Unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on eri oletus-tulkki kuin Windows-käyttöjärjestelmissä. 
+Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, etteivät kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on tietää, että Unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on eri oletus-tulkki kuin Windows-käyttöjärjestelmissä.
 
 [git for windows](https://gitforwindows.org/) asennuksen yhteydessä asennetaan Bash-emulaattori, jossa käytetään Unix-shell -komentoja. Tämä siis mahdollistaa bash-komentojen käyttämisen myös Windows-käyttöjärjestelmissä.
 >HUOM! Kaikki bash komennot ei toimi Git Bashissa
@@ -133,7 +134,7 @@ Tulostuksen ensimmäisellä rivillä on ns 'synopsis' komennon käytöstä. Tois
 >HUOM2! Toinen vaihtoehto on etsiä esimerkiksi googlesta `bash <komento> manual`
 
 
-Komentorivin komennoista ja käytöstä löytyy lisää ohjeita internetistä, [ihan](http://appro.mit.jyu.fi/itkp1011/luennot/cli/) [suomeksikin](http://users.jyu.fi/~nieminen/ohj1/materiaalia/tyokaluohjeet/komentorivi_selviytyminen.html). 
+Komentorivin komennoista ja käytöstä löytyy lisää ohjeita internetistä, [ihan](http://appro.mit.jyu.fi/itkp1011/luennot/cli/) [suomeksikin](http://users.jyu.fi/~nieminen/ohj1/materiaalia/tyokaluohjeet/komentorivi_selviytyminen.html).
 
 [Tässä bash komentoja fiksusti kategorisoituna](https://courses.cs.washington.edu/courses/cse390a/14au/bash.html)
 
@@ -237,7 +238,7 @@ Anna sitten seuraavat komennot:
 
 Useasti projektien etä-repository on keskitetty yhteen paikkaan, jolloin yleisin tapa saada repository myös omalle paikalliselle koneelle on kloonata se. Kuten paikallisen repositoryn luominen, myös kloonaaminen on kertaluonteinen tapahtuma. Kloonattu repository tuodaan paikalliseen koneeseen aina kansion sisällä, jolloin sille ei tarvitse välttämättä luoda oma kansiotaan.
 
-Helpoin tapa kloonata etä-repository on painaa projektin GitHub-sivulla vihreää nappia "clone or download" ja kopioda siinä annettu URL. Tämän jälkeen avaa Git Bash ja anna komento: 
+Helpoin tapa kloonata etä-repository on painaa projektin GitHub-sivulla vihreää nappia "clone or download" ja kopioda siinä annettu URL. Tämän jälkeen avaa Git Bash ja anna komento:
 
 `git clone <repo url>`
 
@@ -252,7 +253,7 @@ Etä-repositoryn kloonaaminen käyttäen SSH protokollaa tapahtuu hieman eri tav
 
 ### 7. Miten viedä muutokset omasta repositorystä etärepositoryyn
 1. `git remote add origin https://github.com/user/example.git`
-2. `git push origin master` 
+2. `git push origin master`
 - komento vie paikallisen master-haaran origin-repoon (origin on etärepositoryn oletusnimi)
 TAI  
 `git push --all`
@@ -260,7 +261,7 @@ TAI
 Jos ensimmäisellä kerralla käytät laajenninta -u (=--set-upstream) haaran etärepository on asetettu oletukseksi ja komennoksi riittää pelkkä
 `git push`
 
-     
+
 
 ### 8. Haarat ja miksi niitä tarvitaan
 Haarat `branch` ovat mainio keino pitää saman projektikokonaisuuden eri kehityisvaiheita erillään toisistaan kuitenkin pitäen ne samassa repositoryssä. Yleisimpiä haarakehyksiä ja haarojen käyttöä erilaisissa projekteissa löytyy [tästä linkistä](https://nvie.com/posts/a-successful-git-branching-model/).
@@ -283,11 +284,10 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
  - `======` erottaa muutokset haarojen välillä
  - `>>>>>>` ilmoittaa, milloin konflikti loppuu
 
- Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+ Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] (https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
 ### 10. Muita huomioita
-- `.gitignore` - on tiedosto, jossa voidaan määritellä etärepositoriosta pois jätettävät tiedostot. Gitignore tiedostoa hyödyntämällä voimme jättää tarpeettomat ja mahdollisesti arkaluontoiset tiedot (salasanat tai muut kehityksessä tarvittavat tiedot) pois etärepositoriosta.
-Yleissääntönä pois jätetään:
+- `.gitignore` - on tiedosto, jossa voidaan määritellä etärepositoriosta pois jätettävät tiedostot. Gitignore tiedostoa hyödyntämällä voimme jättää tarpeettomat ja mahdollisesti arkaluontoiset tiedot (salasanat tai muut kehityksessä tarvittavat tiedot) pois etärepositoriosta.Yleissääntönä pois jätetään:
 - tiedostot, joita projektin kehityksessä ei tarvita
 - generoidut tiedostot
 - paketinhallinnan lataamat tiedostot (esim node-modules)
@@ -325,3 +325,10 @@ Git-versionhallintaa toteutetaan siis paikallisesti, mutta viemällä projektin 
 Huhtikuun 2016 GitHubin raportin mukaan sillä oli yli 14 miljoonaa käyttäjää ja yli 35 miljoonaa ohjelmavarastoa. Tämä tekee siitä maailman suurimman lähdekoodi-verkkopalvelun.
 
 [Tutustu Githubiin](https://github.com/)
+
+
+### 13. SSH-avaimen generointi
+
+SSH-protokollan avulla voit muodostaa yhteyden etäpalvelimiin ja palveluihin ja todentaa ne.SSH-avaimet ovat tapa tunnistaa luotettavat tietokoneet ilman salasanoja.  Jotta kirjautuminen onnistuisi, tarvitsee ensin luoda julkinen (public) ja salainen (private) avain. Sitten julkinen avain kopioidaan kohdekoneelle.
+
+`ssh-keygen` -komennolla voit luoda avainparin. Komennon jälkeen varmennetaan tiedostojen tallennuspaikka sekä sen jälkeen sille voi määritellä salasanan.
