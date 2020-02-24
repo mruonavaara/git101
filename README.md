@@ -348,3 +348,13 @@ Github tarjoaa opiskelijoille Students-packin ilmaiseksi. Students-pack sisält�
 
 Liittyminen on helppoa. Omaan github-käyttäjään pitää liittää oppilaitoksen sähköposti. Liittyminen onnistuu helposti täältä:
 [Github Students-pack](https://education.github.com/pack)
+
+### 15. Lisää Git-hosting-palveluista
+
+GitHub ei ole ainoa etärepositoriovaihtoehto. Muistetaan, että Git on teknologia, joka mahdollistaa versionhallinnan ja että palvelut, kuten GitHub tai GitLab hyödyntävät Git teknologiaa. Voimme valita mieltymystemme mukaan tarpeeseen sopivan palveluntarjoajan. Sama asia voidaan toteuttaa molemmissa palveluissa ja eri palveluntarjoajat tarjoavat hieman erilaisia toiminnallisuuksia. 
+
+Suosituimmat Git hosting-palveluntarjojat
+- GitHub
+- Bitbucket
+- GitLab
+
