@@ -340,7 +340,7 @@ Huhtikuun 2016 GitHubin raportin mukaan sillä oli yli 14 miljoonaa käyttäjä�
 
 ### 13. SSH-avaimen generointi
 
-SSH-protokollan avulla voit muodostaa yhteyden etäpalvelimiin ja palveluihin ja todentaa ne.SSH-avaimet ovat tapa tunnistaa luotettavat tietokoneet ilman salasanoja.  Jotta kirjautuminen onnistuisi, tarvitsee ensin luoda julkinen (public) ja salainen (private) avain. Sitten julkinen avain kopioidaan kohdekoneelle.
+SSH-protokollan avulla voit muodostaa yhteyden etäpalvelimiin ja palveluihin ja todentaa ne. SSH-avaimet ovat tapa tunnistaa luotettavat tietokoneet ilman salasanoja.  Jotta kirjautuminen onnistuisi, tarvitsee ensin luoda julkinen (public) ja salainen (private) avain. Sitten julkinen avain kopioidaan kohdekoneelle.
 
 `ssh-keygen` -komennolla voit luoda avainparin. Komennon jälkeen varmennetaan tiedostojen tallennuspaikka sekä sen jälkeen sille voi määritellä salasanan.
 
