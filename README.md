@@ -18,6 +18,7 @@ Sisällysluettelo
 13. [SSH-avaimen generointi](#13-ssh-keygen)
 14. [Github Students-pack](#14-Github-Students-pack)
 15. [Lisää Git-hosting-palveluista](#15-Lisää-Git-hosting-palveluista)
+16. [Muita hyödyllisiä linkkejä](#16-Muita-hyödyllisiä-linkkejä)
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
 Git on versionhallintajärjestelmä. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia, eli toisin sanoen varmuuskopioi sitä. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhallinnan avulla tehdyt muutokset on helppo dokumentoida. Git on ilmainen ja hajautettu, eli siinä ei ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
@@ -339,7 +340,7 @@ Huhtikuun 2016 GitHubin raportin mukaan sillä oli yli 14 miljoonaa käyttäjä�
 
 ### 13. SSH-avaimen generointi
 
-SSH-protokollan avulla voit muodostaa yhteyden etäpalvelimiin ja palveluihin ja todentaa ne.SSH-avaimet ovat tapa tunnistaa luotettavat tietokoneet ilman salasanoja.  Jotta kirjautuminen onnistuisi, tarvitsee ensin luoda julkinen (public) ja salainen (private) avain. Sitten julkinen avain kopioidaan kohdekoneelle.
+SSH-protokollan avulla voit muodostaa yhteyden etäpalvelimiin ja palveluihin ja todentaa ne. SSH-avaimet ovat tapa tunnistaa luotettavat tietokoneet ilman salasanoja.  Jotta kirjautuminen onnistuisi, tarvitsee ensin luoda julkinen (public) ja salainen (private) avain. Sitten julkinen avain kopioidaan kohdekoneelle.
 
 `ssh-keygen` -komennolla voit luoda avainparin. Komennon jälkeen varmennetaan tiedostojen tallennuspaikka sekä sen jälkeen sille voi määritellä salasanan.
 
@@ -360,3 +361,13 @@ Suosituimmat Git hosting-palveluntarjojat
 - GitLab
 
 [Linkki videoon, jossa vertaillaan GitHubia ja GitLabia](https://www.youtube.com/watch?v=s8DCpG1PeaU)
+
+### 16. Muita hyödyllisiä linkkejä
+
+[Gitin perusteet 50 minuutissa](https://www.youtube.com/watch?v=U8GBXvdmHT4)
+[GitHubin YouTube kanava](https://www.youtube.com/githubguides)
+[Git Handbook](https://guides.github.com/introduction/git-handbook/)
+[Git Cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
+[Resourses to learn Git](https://try.github.io/)
+[Git 101, with Exercises](https://gist.github.com/peterhurford/4d43aa5d6de114c0c741ba664c9c5ff5)
+[Git Exercise](https://gitexercises.fracz.com/)
