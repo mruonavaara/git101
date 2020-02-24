@@ -8,11 +8,11 @@ Sisällysluettelo
 3. [Komentorivin käyttö](#3-komentotulkin-käyttö)
 4. [Yleisimpiä git-komentoja](#4-yleisimpiä-git-komentoja)
 5. [Muita git komentoja](#5-muita-git-komentoja)
-6. [Ensimmäisen repositoryn luonti omalle koneelle](#5ensimmäisen-repositoryn-luonti-omalle-koneelle)
-7. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
-8. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
-9. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
-10. [Muita huomioita](#9-muita-huomioita)
+6. [Ensimmäisen repositoryn luonti omalle koneelle](#6-ensimmäisen-repositoryn-luonti-omalle-koneelle)
+7. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#7-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
+8. [Haarat ja miksi niitä tarvitaan](#8-haarat-ja-miksi-niitä-tarvitaan)
+9. [Merge conflict! Mitä tapahtui, mitä teen?](#9-merge-conflict-mitä-tapahtui-mitä-teen)
+10. [Muita huomioita](#10-muita-huomioita)
 11. [Commit-viesteistä](#11-commit-viesteistä)
 12. [Mikä ihmeen Github?](#12-mikä-ihmeen-Github)
 13. [SSH-avaimen generointi](#13-ssh-keygen)
@@ -275,6 +275,10 @@ Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijain
 
 [Luvusta 4](#4-yleisimpiä-git-komentoja) löydät erilaisia git-komentoja, joilla luoda haaroja, navigoida eri haarojen välillä sekä yhdistää haaroja.
 
+#### 8.1 Hyvä haaroitusmalli
+Hyvässä haaroituksessa master haarassa julkaistaan vain valmiita versioita. Develop haarassa on kaikki valmiit muutokset, mitä seuraavaan julkaisuun ollaan lisäämässä. Kaikki kehitys tapahtuu feature haaroissa, joista valmiit ominaisuudet lisätään develop haaraan. Kun develop haara on vakaa se voidaan yhdistää master haaraan, ja silloin tulee uusi versio ohjelmasta, mikä kuuluu tagata.
+
+![git-malli](images/git-model.png)
 
 ### 9. Merge conflict! Mitä tapahtui, mitä teen?
 Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja Git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
