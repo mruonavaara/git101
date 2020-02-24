@@ -360,3 +360,13 @@ Suosituimmat Git hosting-palveluntarjojat
 - GitLab
 
 [Linkki videoon, jossa vertaillaan GitHubia ja GitLabia](https://www.youtube.com/watch?v=s8DCpG1PeaU)
+
+### 16. Muita hyödyllisiä linkkejä
+
+[Gitin perusteet 50 minuutissa](https://www.youtube.com/watch?v=U8GBXvdmHT4)
+[GitHubin YouTube kanava](https://www.youtube.com/githubguides)
+[Git Handbook](https://guides.github.com/introduction/git-handbook/)
+[Git Cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
+[Resourses to learn Git](https://try.github.io/)
+[Git 101, with Exercises](https://gist.github.com/peterhurford/4d43aa5d6de114c0c741ba664c9c5ff5)
+[Git Exercise](https://gitexercises.fracz.com/)
