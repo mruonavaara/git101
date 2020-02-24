@@ -16,7 +16,7 @@ Sisällysluettelo
 11. [Commit-viesteistä](#11-commit-viesteistä)
 12. [Mikä ihmeen Github?](#12-mikä-ihmeen-Github)
 13. [SSH-avaimen generointi](#13-ssh-keygen)
-
+14. [Github Students-pack](#14-Github-Students-pack)
 
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
@@ -332,3 +332,10 @@ Huhtikuun 2016 GitHubin raportin mukaan sillä oli yli 14 miljoonaa käyttäjä�
 SSH-protokollan avulla voit muodostaa yhteyden etäpalvelimiin ja palveluihin ja todentaa ne.SSH-avaimet ovat tapa tunnistaa luotettavat tietokoneet ilman salasanoja.  Jotta kirjautuminen onnistuisi, tarvitsee ensin luoda julkinen (public) ja salainen (private) avain. Sitten julkinen avain kopioidaan kohdekoneelle.
 
 `ssh-keygen` -komennolla voit luoda avainparin. Komennon jälkeen varmennetaan tiedostojen tallennuspaikka sekä sen jälkeen sille voi määritellä salasanan.
+
+### 14. Github Students-pack
+
+Github tarjoaa opiskelijoille Students-packin ilmaiseksi. Students-pack sisältää useita kehittämistyökaluja opiskelijoille. Esimerkiksi opiskelijan paketista löytyy DigitalOcean, joka tarjoaa palvelimia. Opiskelijan paketti tarjoaa $50 credittiä uusille käyttäjille. Opiskelijan paketista löytyy myös useita ilmaisia kursseja.
+
+Liittyminen on helppoa. Omaan github-käyttäjään pitää liittää oppilaitoksen sähköposti. Liittyminen onnistuu helposti täältä:
+[Github Students-pack](https://education.github.com/pack)
