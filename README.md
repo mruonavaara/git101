@@ -364,10 +364,10 @@ Suosituimmat Git hosting-palveluntarjojat
 
 ### 16. Muita hyödyllisiä linkkejä
 
-[Gitin perusteet 50 minuutissa](https://www.youtube.com/watch?v=U8GBXvdmHT4)
-[GitHubin YouTube kanava](https://www.youtube.com/githubguides)
-[Git Handbook](https://guides.github.com/introduction/git-handbook/)
-[Git Cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
-[Resourses to learn Git](https://try.github.io/)
-[Git 101, with Exercises](https://gist.github.com/peterhurford/4d43aa5d6de114c0c741ba664c9c5ff5)
-[Git Exercise](https://gitexercises.fracz.com/)
+[Gitin perusteet 50 minuutissa](https://www.youtube.com/watch?v=U8GBXvdmHT4)<br>
+[GitHubin YouTube kanava](https://www.youtube.com/githubguides)<br>
+[Git Handbook](https://guides.github.com/introduction/git-handbook/)<br>
+[Git Cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)<br>
+[Resourses to learn Git](https://try.github.io/)<br>
+[Git 101, with Exercises](https://gist.github.com/peterhurford/4d43aa5d6de114c0c741ba664c9c5ff5)<br>
+[Git Exercise](https://gitexercises.fracz.com/)<br>
