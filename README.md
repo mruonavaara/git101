@@ -14,6 +14,7 @@ Sisällysluettelo
 9. [Merge conflict! Mitä tapahtui, mitä teen?](#9-merge-conflict-mitä-tapahtui-mitä-teen)
 10. [Muita huomoita](#10-muita-huomioita)
 11. [Mikä ihmeen Github?](#11-mikä-ihmeen-Github)
+12. [Github Students-pack](#12-Github-Students-pack)
 
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
@@ -185,3 +186,11 @@ Git-versionhallintaa toteutetaan siis paikallisesti, mutta viemällä projektin 
 Huhtikuun 2016 GitHubin raportin mukaan sillä oli yli 14 miljoonaa käyttäjää ja yli 35 miljoonaa ohjelmavarastoa. Tämä tekee siitä maailman suurimman lähdekoodi-verkkopalvelun.
 
 [Tutustu Githubiin](https://github.com/)
+
+
+### 12. Github Students-pack
+
+Github tarjoaa opiskelijoille Students-packin ilmaiseksi. Students-pack sisältää useita kehittämistyökaluja opiskelijoille. Esimerkiksi opiskelijan paketista löytyy DigitalOcean, joka tarjoaa palvelimia. Opiskelijan paketti tarjoaa $50 credittiä uusille käyttäjille. Opiskelijan paketista löytyy myös useita ilmaisia kursseja.
+
+Liittyminen on helppoa. Omaan github-käyttäjään pitää liittää oppilaitoksen sähköposti. Liittyminen onnistuu helposti täältä:
+[Github Students-pack](https://education.github.com/pack)
