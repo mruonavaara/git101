@@ -18,6 +18,7 @@ Sisällysluettelo
 13. [SSH-avaimen generointi](#13-ssh-keygen)
 14. [Github Students-pack](#14-Github-Students-pack)
 15. [Lisää Git-hosting-palveluista](#15-Lisää-Git-hosting-palveluista)
+16. [Muita hyödyllisiä linkkejä](#16-Muita-hyödyllisiä-linkkejä)
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
 Git on versionhallintajärjestelmä. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia, eli toisin sanoen varmuuskopioi sitä. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhallinnan avulla tehdyt muutokset on helppo dokumentoida. Git on ilmainen ja hajautettu, eli siinä ei ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
