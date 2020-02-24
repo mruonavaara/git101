@@ -9,8 +9,9 @@ Sisällys
 4. [Yleisimpiä git-komentoja](#4-yleisimpiä-git-komentoja)
 5. [Ensimmäisen repositoryn luonti omalle koneelle](#5ensimmäisen-repositoryn-luonti-omalle-koneelle)
 6. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
-7. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
-8. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
+7. [Hiukan Githubista](#7-hiukan-gitistä)
+8. [Haarat ja miksi niitä tarvitaan](#8-haarat-ja-miksi-niitä-tarvitaan)
+9. [Merge conflict! Mitä tapahtui, mitä teen?](#9-merge-conflict-mitä-tapahtui-mitä-teen)
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
 Git on versionhallintajärjestelmä. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia, eli toisin sanoen varmuuskopio sitä. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhallinnan avulla tehdyt muutokset on helppo dokumentoida. Git on Ilmainen. Git on hajautettu, eli siinä ei ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
@@ -114,7 +115,12 @@ Anna sitten seuraavat komennot:
 1. `git remote add origin https://github.com/user/example.git`
 2. `git push origin master`
 
-### 7. Haarat ja miksi niitä tarvitaan
+### 7. Hiukan Githubista
+Git itsessään on vain komentorivillä toimiva ohjelma, joten sen käytön helpottamiseksi on kehitetty lukuisia eri graafisia käyttöliittymiä.
+Niistä Github on ainakin tällä hetkellä käytetyin, ja omien raporttiensa mukaan se on virallisesti "maailman suurin lähdekoodi-verkkopalvelu".
+Kun siis puhutaan Gitin käytössä etärepositoreista, niin niillä tarkoitetaan Githubissa (tai Githubin kaltaisessa palvelussa) säilytettävää ohjelmakoodia. Githubilla on kuitenkin nykyään myös muita palveluita, esimerkiksi erilaisia työkaluja projektinhallinnan helpottamiseksi.
+
+### 8. Haarat ja miksi niitä tarvitaan
 Haarat `branch` ovat mainio keino pitää saman projektikokonaisuuden eri kehityisvaiheita erillään toisistaan kuitenkin pitäen ne samassa repositoryssä. Yleisimpiä haarakehyksiä ja haarojen käyttöä erilaisissa projekteissa löytyy [tästä linkistä](https://nvie.com/posts/a-successful-git-branching-model/).
 
 Haarojen tarkoitusperä on siis pitää esimerkiksi kehityksessä olevan sovelluksen valmiit testatut osat master haarassa ja toteuttaa testausta sekä jatkokehitystä esimerkiksi development haarassa. Lisäksi voidaan hyvin käyttää omia haaroja ei niin tärkeille komponenteille tai ideoille.
@@ -125,7 +131,7 @@ Ennen kuin siirryt haaroista toiseen, muista aina commitoida muutoksesi! Staging
 Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijaintina täydelliselle koodille mitä ei tulla enää muuttamaan.
 
 
-### 8. Merge conflict! Mitä tapahtui, mitä teen?
+### 9. Merge conflict! Mitä tapahtui, mitä teen?
 Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
 
  Tällöin on käsin ratkaistava konfliktit ja valittava pidettävät koodit. Git ilmoittaa, missä kansiossa konflikti on tapahtunut ja toisensa poissulkevat commitit on eroteltu tiedostossa:
