@@ -1,8 +1,8 @@
-# git101 ![git-logo](images/Git-logo.png)
-Git-opas Haaga-Helian opiskelijoille<br>
-Auttaa alkuun gitin käytön kanssa!
+# Git 101 ![git-logo](images/Git-logo.png)
+Git-opas Haaga-Helian opiskelijoille.<br>
+Auttaa alkuun Gitin käytön kanssa!
 
-Sisällys
+Sisällysluettelo
 1. [Mikä on Git ja mihin sitä tarvitaan?](#1-mikä-git-on-ja-mihin-sitä-tarvitaan)
 2. [Git:n asennus](#2-gitn-asennus)
 3. [Komentorivin käyttö](#3-komentotulkin-käyttö)
@@ -11,19 +11,29 @@ Sisällys
 6. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
 7. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
 8. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
+<<<<<<< HEAD
 9. [Kaikkea ei tarvitse commitoida - gitignore](#9-kaikkea-ei-tarvitse-commitoida---gitignore)
+=======
+9. [Muita huomoita](#9-muita-huomioita)
+>>>>>>> cba532e4d3edd39dec303829cea5be3f83fe962d
 
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
 Git on versionhallintajärjestelmä. Versionhallinnalla tarkoitetaan palvelua, joka säilyttää koodia, eli toisin sanoen varmuuskopioi sitä. Versionhallinnan avulla voidaan muutosten tekemisen jälkeenkin palata aiempiin versioihin, jos esim. jotain menee pieleen. Koodin lisäksi versionhallinnan avulla tehdyt muutokset on helppo dokumentoida. Git on ilmainen ja hajautettu, eli siinä ei ole minkäänlaista keskitettyä palvelinta. Jokainen Git-tietovarasto on itsenäinen.
 
 ### 2. Git:n asennus
-Git:n käyttämiseksi git-ohjelmiston on oltava asennettuna tietokoneella, jolla sitä halutaan käyttää. Git-ohjelmiston asentamiseen löytyy useita eri ohjeita. Alla git:n omat ohjeet.
+Git:n käyttämiseksi Git-ohjelmiston on oltava asennettuna tietokoneella, jolla sitä halutaan käyttää. Git-ohjelmiston asentamiseen löytyy useita eri ohjeita. Alla Git:n omat ohjeet.
 
 [Git lataus](https://git-scm.com/downloads)<br>
 [Git asennusohjeet](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 #### 2.1 Konfigurointi
+Jotta Git:in käyttö olisi mahdollisimman helppoa ja tehokasta, se kannattaa konfiguroida käyttämään tietynlaisia asetuksia ja työkaluja. Konfiguroinnin avulla Git saadaan toimimaan sillä tavalla kuin itse, tai projektitiimi haluaa. 
+
+Konfigurointikomentoja löytyy lukusia, jotka kaikki löytyy komennolla:
+
+- `git config`
+
 ##### 2.1.1 Käyttäjätiedot
 Jokaiseen versionhallintaan talletettavaan muutokseen tallennetaan sen tehneen käyttäjän nimi ja sähköpostiosoite. Git-ohjelmiston asentamisen jälkeen olisikin hyvä asettaa käyttäjätiedot komennoilla:
 
@@ -35,7 +45,7 @@ Jokaiseen versionhallintaan talletettavaan muutokseen tallennetaan sen tehneen k
 - `git config --global core.editor "<editor> --wait"`
 
 ##### 2.1.2 Tekstieditori
-Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää tekstieditoria. Ohjelmiston asentamisen jälkeen oletusarvoinen tekstieditori on [Vi](https://fi.wikipedia.org/wiki/Vi). Vi:n käyttäminen voi tuntu haastavalta (ohjeita tosin löytyy esim [täältä](https://fi.wikipedia.org/wiki/Vi#Peruskomennot)), joten git-ohjelmistossa on mahdollista vaihtaa tekstieditoria komennolla:
+Git-ohjelmistoa käyttäessä tulee esiin tilanteita, joissa on tarve käyttää tekstieditoria. Ohjelmiston asentamisen jälkeen oletusarvoinen tekstieditori on [Vi](https://fi.wikipedia.org/wiki/Vi). Vi:n käyttäminen voi tuntua haastavalta (ohjeita tosin löytyy esim [täältä](https://fi.wikipedia.org/wiki/Vi#Peruskomennot)), joten Git-ohjelmistossa on mahdollista vaihtaa tekstieditoria komennolla:
 - `git config --global core.editor "<editor-and-options>"`
 
 Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perusteelliset ohjeet eri editorien asettamiseksi löytyy [täältä](https://git-scm.com/book/tr/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor).
@@ -43,9 +53,9 @@ Tekstieditoriksi voi yrittää asettaa varmaan minkä tahansa ohjelman. Perustee
 ### 3. Komentorivin käyttö
 Komentorivi tai komentoliittymä on tapa kommunikoida tietokoneen kanssa. Komentoliittymässä ajetaan tyypillisesti komentotulkkia. Tällöin käyttäjä kirjoittaa komentoriville käynnistettävän ohjelman nimen tai komentotulkin sisäisen komennon mahdollisine parametreineen ja painaa syöttöpainiketta, jolloin komentotulkki käsittelee käskyn ja tulostaa vastineen näytölle.
 
-Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, ettei kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on tietää, että Unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on yleensä eri tulkki, kuin Windows käyttöjärjestelmissä. On kuitenkin hyvä huomata, että esimerkiksi [git for windows](https://gitforwindows.org/) asennuksen yhteydessä asennetaan Bash-emulaattori, jossa käytetään Unix-shell komentoja.
+Komentotulkkeja on [useita](https://en.wikipedia.org/wiki/List_of_command-line_interpreters) ja on tärkeää huomata, etteivät kaikki komennot toimi kaikissa tulkeissa. Ehkä tärkeintä on tietää, että Unixin kaltaisissa käyttöjärjestelmissä (Linux, Mac) on yleensä eri tulkki kuin Windows -käyttöjärjestelmissä. On kuitenkin hyvä huomata, että esimerkiksi [git for windows](https://gitforwindows.org/) asennuksen yhteydessä asennetaan Bash-emulaattori, jossa käytetään Unix-shell -komentoja.
 
-Komentoliittymän käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man. Komennot annetaan komeentoriville muodossa:
+Komentoliittymän käyttö ei välttämättä vaadi suurta järjestelmän tuntemusta, sillä komennot ovat usein lyhennyksiä selväkielisistä englanninkielisistä sanoista, ja niille on yleensä saatavilla käytönaikainen ohje komennoilla help tai man. Komennot annetaan komentoriville muodossa:
 
     command param1 param2 param3 … paramN
 
@@ -57,13 +67,13 @@ Komennon vaihtoehtoina (options) voidaan esimerkiksi antaa tarkennuksia, miten k
 
 Yleensä kaikki git-komennot annetaankin komentoriviä käyttäen. Komennolla `git help` saadaan lista komennoista, jotka voidaan suorittaa.
 
-Komentorivin komennoista ja käytöstä löytyy internetistä varmasti miljoonia ohjeita, [ihan](http://appro.mit.jyu.fi/itkp1011/luennot/cli/) [suomeksikin](http://users.jyu.fi/~nieminen/ohj1/materiaalia/tyokaluohjeet/komentorivi_selviytyminen.html). Tärkeintä on ehkä ymmärtää, että komentorivia käyttäessä, työskennellään aina jossain työhakemistossa (ts working directory tai kansio). Kaikki annetut komennot suoritetaan tässä työhakemistossa ellei toisin komenneta. Esimerkiksi komennon `git init` suorittaminen luo paikallisen tyhjän repositorion sen hetkiseen __työhakemistoon__.
+Komentorivin komennoista ja käytöstä löytyy internetistä varmasti miljoonia ohjeita, [ihan](http://appro.mit.jyu.fi/itkp1011/luennot/cli/) [suomeksikin](http://users.jyu.fi/~nieminen/ohj1/materiaalia/tyokaluohjeet/komentorivi_selviytyminen.html). Tärkeintä on ehkä ymmärtää, että komentorivia käyttäessä työskennellään aina jossain työhakemistossa (ts working directory tai kansio). Kaikki annetut komennot suoritetaan tässä työhakemistossa ellei toisin komenneta. Esimerkiksi komennon `git init` suorittaminen luo paikallisen tyhjän repositorion sen hetkiseen __työhakemistoon__.
 
 Nykyisen työhakemiston saa selville shell-tulkissa komennolla `pwd` - **p**rint **w**orking **d**irectory. Komento toimii myös Windowsin PowerShellissä, mutta ei command promptissa (cmd).
 
-Työhakemistossa olevat tiedostot ja alihakemistot saa selville suorittamalla komennon `ls` (ei toimi command promptissa, ks [`dir`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)). `ls` -komennon voi suortittaa myös esimerkiksi vaihtoehdolla (option) `-a`, jolloin listataan myös tiedostot ja kansiot, jotka alkavat `.` merkillä ('piilotetut tiedostot/kansiot'). Esimerkiksi `git init` -komennolla luodaa `.git` hakemisto, joka ei näy pelkällä `ls` -komennolla, mutta näkyy suorittamalla `ls -a`. Komentoa voi myös käyttää antamalla sille argumenttina hakemisto, jonka tiedostot halutaan listata. Esimerkiksi suorittamalla `ls -a /c` -komento, saadaan listattua __kaikki__ tiedosto ja hakemistot, jotka sijaitsevat `/c` -hakemistossa (ts c-asema).
+Työhakemistossa olevat tiedostot ja alihakemistot saa selville suorittamalla komennon `ls` (ei toimi command promptissa, ks [`dir`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)). `ls` -komennon voi suorittaa myös esimerkiksi vaihtoehdolla (option) `-a`, jolloin listataan myös tiedostot ja kansiot, jotka alkavat `.` merkillä ('piilotetut tiedostot/kansiot'). Esimerkiksi `git init` -komennolla luodaan `.git` hakemisto, joka ei näy pelkällä `ls` -komennolla, mutta näkyy suorittamalla `ls -a`. Komentoa voi myös käyttää antamalla sille argumenttina hakemisto, jonka tiedostot halutaan listata. Esimerkiksi suorittamalla `ls -a /c` -komento, saadaan listattua __kaikki__ tiedosto ja hakemistot, jotka sijaitsevat `/c` -hakemistossa (ts c-asema).
 
-Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irectory. Komento toimii sekä command promptissa, että shellissä. Ilman argumentteja annettaessa, Unix-ympäristössä (Linux & Mac), komennon suorittaminen vaihtaa työhakemistoksi käyttäjän kotihakemiston ja Windows-ympäristössä tulostetaan sen hetkinen työhakemisto. Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan olevan uusi työhakemisto. Argumentin hakemisto voidaan antaa joko täydellisenä polkuna (absolute path) tai suhteellisena polkuna (relative path). Esimerkiksi, jos työhakemistoksi halutaan vaihtaa `C:\Users\Git-user\Documents`, voidaan käyttää ___mistä tahansa___ työhakemistosta komentoa: `cd /C/Users/Git-user/Documents` (__shell__) TAI jos nykyinen työhakemisto on `C:\Users\Git-user` antamalla komento: `cd Documents`.
+Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irectory. Komento toimii sekä command promptissa että shellissä. Ilman argumentteja annettaessa Unix-ympäristössä (Linux & Mac) komennon suorittaminen vaihtaa työhakemistoksi käyttäjän kotihakemiston ja Windows-ympäristössä tulostetaan sen hetkinen työhakemisto. Yleensä komennolle kuitenkin annetaan argumenttina se hakemisto, jonka halutaan olevan uusi työhakemisto. Argumentin hakemisto voidaan antaa joko täydellisenä polkuna (absolute path) tai suhteellisena polkuna (relative path). Esimerkiksi, jos työhakemistoksi halutaan vaihtaa `C:\Users\Git-user\Documents`, voidaan käyttää ___mistä tahansa___ työhakemistosta komentoa: `cd /C/Users/Git-user/Documents` (__shell__) TAI jos nykyinen työhakemisto on `C:\Users\Git-user` antamalla komento: `cd Documents`.
 
 ### 4. Yleisimpiä git-komentoja
 
@@ -71,48 +81,51 @@ Nykyistä työhakemistoa vaihdetaan komennolla `cd` - ***c***hange ***d***irecto
 
 - `git config --global user.email <email>` - Asettaa käyttäjälle sähköpostin, joka näkyy käyttäjän tekemissä commiteissa.
 
-- `git init` - luo paikallisen tyhjän repositoryn
+- `git init` - Luo paikallisen tyhjän repositoryn
 
-- `git add .` - vertaa hakemistoa local repoon ja siirtää kaikki muutokset tilaan staged, eli nyt ne ovat valmiita commitoitavaksi local repoon. Koskee myös tiedoston luomisia ja poistamisia.
+- `git add .` - Vertaa hakemistoa local repoon ja siirtää kaikki muutokset tilaan staged, eli nyt ne ovat valmiita commitoitavaksi local repoon. Koskee myös tiedoston luomisia ja poistamisia.
 
-- `git commit` - tallettaa staged tilassa olevat tiedostot local repositoryyn.
+- `git commit` - Tallettaa staged tilassa olevat tiedostot local repositoryyn.
 
-- `git commit --amend` - tällä voit lisätä edelliseen committiin muutoksia, jotka unohdit tehdä(ennen sitä stageta muutokset normaalisti git add:lla)
+- `git commit --amend` - Tällä voit lisätä edelliseen committiin muutoksia, jotka unohdit tehdä (ennen sitä stageta muutokset normaalisti git add:lla).
 
-- `git status` - näyttää staged tilassa olevat tiedostot
+- `git status` - Näyttää staged tilassa olevat tiedostot.
 
-- `git diff` - näyttää erot tiedostojen työtila versioissa verrattuna local repossa oleviin versioihin. Eli näyttää muutokset, joita ei ole commitettu
+- `git diff` - Näyttää erot tiedostojen työtila versioissa verrattuna local repossa oleviin versioihin. Eli näyttää muutokset, joita ei ole commitettu.
 
-- `git reset` - tyhjentää tiedostot staged tilasta, eli jos olet tehnyt git add jonkun tiedoston niin git reset poistaa sen tiedoston staged tilasta
+- `git reset` - Tyhjentää tiedostot staged tilasta, eli jos olet tehnyt git add jonkun tiedoston niin git reset poistaa sen tiedoston staged tilasta.
 
-- `git rm <file name>` - poistaa tiedoston ja asettaa tiedoston poiston staged-tilaan, jonka jälkeen tiedoston poisto voidaan commitoida (jos halutaan poistaa kansio, käytetään laajenninta -r, eli `git rm -r <folder name>`)
+- `git rm <file name>` - Poistaa tiedoston ja asettaa tiedoston poiston staged-tilaan, jonka jälkeen tiedoston poisto voidaan commitoida (jos halutaan poistaa kansio, käytetään laajenninta -r, eli `git rm -r <folder name>`).
 
-- `git checkout` - poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version
-- `git checkout <branch name>` - vaihtaa työtilan nimettyyn haaraan
+- `git checkout` - Poistaa muutokset työtilan versiosta ja palautuu local repossa olevan tuoreimman version mukaiseksi.
 
-- `git revert <commit>` - jos olet jo commitoinut muutokset ja haluatkin palata takaisin aikaisempaan tilaan
+- `git checkout <branch name>` - Vaihtaa työtilan nimettyyn haaraan.
 
-- `git branch testing` - luo uuden testing-nimisen haaran
+- `git revert <commit>` - Jos olet jo commitoinut muutokset ja haluatkin palata takaisin aikaisempaan tilaan.
 
-- `git checkout -b <branch name>` - luo uuden haaran ja vaihtaa työtilan tähän uuteen haaraan
+- `git branch testing` - Luo uuden testing-nimisen haaran.
 
-- `git fetch <nameOfTheRemoteRepo>` - lataa remote repositoryn tiedot paikalliseen repositoryyn, mutta ei muuta paikallista repoa
+- `git checkout -b <branch name>` - Luo uuden haaran ja vaihtaa työtilan tähän uuteen haaraan.
 
-- `git pull <remotenNimi>` - hakee nykyisen haaran tiedot etä-reposta ja tekee mergen automaattisesti
+- `git fetch <nameOfTheRemoteRepo>` - Lataa remote repositoryn tiedot paikalliseen repositoryyn, mutta ei muuta paikallista repoa.
 
-- `git merge <branch name>` - yhdistää nimetyn haaran muutokset työtilaan
+- `git pull <remotenNimi>` - Hakee nykyisen haaran tiedot etä-reposta ja tekee mergen automaattisesti.
 
-- `git push` - tallentaa omat lokaalit muutokset etärepositoryyn.
+- `git merge <branch name>` - Yhdistää nimetyn haaran muutokset työtilaan.
+
+- `git push` - Tallentaa omat lokaalit muutokset etärepositoryyn.
 
 - `git --help` - Listaa hyödyllisimmät git komennot.
 
 - `git clone <repository-url>` - Kloonaa etärepositoryn paikalliseen repositoryyn.
 
+### 5. Ensimmäisen repositoryn luonti omalle koneelle
 
-
-### 5.Ensimmäisen repositoryn luonti omalle koneelle
 Avaa Bash-komentokehote kansiossa, josta haluat tehdä repositoryn tai siirry oikeaan kansioon komennolla
 `cd <kansio>`
+
+Voit myös luoda Bashin kautta kansion johon haluat reposirotyn tehdä komennoilla `mkdir <kansion nimi>` jonka jälkeen siirtyä kansioon komennolla `cd <kansio>`
+
 Anna sitten seuraavat komennot:
 1. `git init`
 2. `git add .`
@@ -132,9 +145,11 @@ Ennen kuin siirryt haaroista toiseen, muista aina commitoida muutoksesi! Staging
 
 Yleisesti ottaen masterissa ei koodata mitään ja se toimiikin vain loppusijaintina täydelliselle koodille mitä ei tulla enää muuttamaan.
 
+[Luvusta 4](#4-yleisimpiä-git-komentoja) löydät erilaisia git-komentoja, joilla luoda haaroja, navigoida eri haarojen välillä sekä yhdistää haaroja.
+
 
 ### 8. Merge conflict! Mitä tapahtui, mitä teen?
-Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
+Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenään ristiriitaisia muutoksia ja Git ei tiedä, mitkä niistä tulisi sisällyttää committiin.
 
  Tällöin on käsin ratkaistava konfliktit ja valittava pidettävät koodit. Git ilmoittaa, missä kansiossa konflikti on tapahtunut ja toisensa poissulkevat commitit on eroteltu tiedostossa:
  - `<<<<<<` kertoo,mistä konflikti alkaa
@@ -143,6 +158,15 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
 
  Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
+### 9. Muita huomioita
+- `.gitignore` - on tiedosto, jossa voidaan määritellä etärepositoriosta pois jätettävät tiedostot. Gitignore tiedostoa hyödyntämällä voimme jättää tarpeettomat ja mahdollisesti arkaluontoiset tiedot (salasanat tai muut kehityksessä tarvittavat tiedot) pois etärepositoriosta. Yleisimpiä `.gitignore`ssa käytettyjä toimintoja ovat mm:
 
-### 9. Kaikkea ei tarvitse commitoida - gitignore
-Usein repository sisältää myös tiedostoja, joiden muutoksia ei syystä tai toisesta haluta seurata versinhallinnassa. Luomalla repositoryyn `.gitignore` -nimisen tiedoston on mahdollista määrittää tiedostoja tai hakemistoja, jotka git jättää versionhallinnassa huomioimatta.
+  - Jätä huomioimatta kaikki tityllä tiedostopäätteellä tallennetut tiedostot. Esimerkiksi seuraavanlainen `.gitignore` -tiedostoon merkitty rivi jättää huomioimatta kaikki `.env` -päätteiset tiedostot:
+
+  ```.env```
+
+  - Jätä huomioimatta kokonainen hakemisto sekä sen sisältämät tiedostot ja alihakemistot:
+
+  ```/directory_name```
+
+  
