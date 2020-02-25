@@ -11,7 +11,7 @@ Sisällysluettelo
 6. [Miten viedä muutokset omasta repositorystä etärepositoryyn](#6-miten-viedä-muutokset-omasta-repositorystä-etärepositoryyn)
 7. [Haarat ja miksi niitä tarvitaan](#7-haarat-ja-miksi-niitä-tarvitaan)
 8. [Merge conflict! Mitä tapahtui, mitä teen?](#8-merge-conflict-mitä-tapahtui-mitä-teen)
-9. [Kaikkea ei tarvitse commitoida - gitignore](#9-kaikkea-ei-tarvitse-commitoida---gitignore)
+9. [Muita huomoita](#9-muita-huomioita)
 
 
 ### 1. Mikä Git on ja mihin sitä tarvitaan?
@@ -154,6 +154,13 @@ Merge conflicteja tapahtuu silloin kun yhdistettävissä haaroissa on keskenää
 
  Tarkista kumpi otetaan käyttöön, jonka jälkeen poista konflikti merkit, tallenna tiedostot ja commitoi koodi. Lisää tietoa merge konfliktien korjaamiseen löytyy [täältä] https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
+### 9. Muita huomioita
+- `.gitignore` - on tiedosto, jossa voidaan määritellä etärepositoriosta pois jätettävät tiedostot. Gitignore tiedostoa hyödyntämällä voimme jättää tarpeettomat ja mahdollisesti arkaluontoiset tiedot (salasanat tai muut kehityksessä tarvittavat tiedot) pois etärepositoriosta. Yleisimpiä `.gitignore`ssa käytettyjä toimintoja ovat mm:
 
-### 9. Kaikkea ei tarvitse commitoida - gitignore
-Usein repository sisältää myös tiedostoja, joiden muutoksia ei syystä tai toisesta haluta seurata versinhallinnassa. Luomalla repositoryyn `.gitignore` -nimisen tiedoston on mahdollista määrittää tiedostoja tai hakemistoja, jotka git jättää versionhallinnassa huomioimatta.
+  - Jätä huomioimatta kaikki tityllä tiedostopäätteellä tallennetut tiedostot. Esimerkiksi seuraavanlainen `.gitignore` -tiedostoon merkitty rivi jättää huomioimatta kaikki `.env` -päätteiset tiedostot:
+
+  ```.env```
+
+  - Jätä huomioimatta kokonainen hakemisto sekä sen sisältämät tiedostot ja alihakemistot:
+
+  ```/directory_name```
